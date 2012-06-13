@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>UDS Description</title>
+	<script type="text/javascript" src="../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/box.js"></script>
+	<script type="text/javascript" src="../utils/mctabs.js"></script>
+	<script type="text/javascript" src="../utils/form_utils.js"></script>
+	<link href="css/udsDescription.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form onsubmit="udsBox.update();return false;" action="#">
+	<div class="tabs">
+		<ul>
+			<li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">UDS Description</a></span></li>
+		</ul>
+	</div>
+
+	<div class="panel_wrapper">
+		<div id="general_panel" class="panel current">
+			<table border="0" cellpadding="4" cellspacing="0">
+                    <tr>
+                        <td><label for="skin">Skin</label></td>
+                        <td>
+                        	<select id="skin" name="skin">
+                        	    <option value="">Default</option>
+                        	    <option value="bright">Bright</option>
+                        	    <option value="dark">Dark</option>
+                        	</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="width">Width</label></td>
+                        <td>
+                        	<input type="text" id="width" name="width" value="200" />px
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="height">Height</label></td>
+                        <td>
+                        	<input type="text" id="height" name="height" value="300" />px
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="top">Top</label></td>
+                        <td>
+                        	<input type="text" id="top" name="top" value="20" />px
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="left">Left</label></td>
+                        <td>
+                        	<input type="text" id="left" name="left" value="20" />px
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="text">Text</label></td>
+                        <td>
+                        	<textarea id="text" name="text"></textarea>
+                        </td>
+                    </tr>
+            </table>
+		</div>
+	</div>
+
+	<div class="mceActionPanel">
+		<div style="float: left">
+			<input type="submit" id="insert" name="insert" value="{#insert}" />
+		</div>
+
+		<div style="float: right">
+			<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+	</div>
+</form>
+</body>
+</html>

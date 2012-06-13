@@ -1,0 +1,2 @@
+[20-Feb-2012 16:56:39] PHP Fatal error:  Call to undefined function  bp_is_active() in /home2/tiratema/public_html/ammpro/wp-content/plugins/buddypress/bp-core/admin/bp-core-admin.php on line 45
+[18-Apr-2012 13:44:18] PHP Fatal error:  Cannot unset string offsets in /home2/tiratema/public_html/ammpro/wp-content/plugins/members_access_refactor_v3/wpec_members_access_admin.php on line 30

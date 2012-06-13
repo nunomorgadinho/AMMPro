@@ -1,0 +1,36 @@
+.wrap .pagination {
+	font-weight: bold;
+	display:inline;
+	padding-left:10px;
+}
+.wrap .pagination ul {
+	margin:0;
+	padding:0;
+	display: inline;
+}
+.wrap .pagination li {
+	list-style-type: none;
+	display: inline;
+	padding-right: 10px;
+}
+.wrap .pagination a{
+	text-decoration: none;
+}
+
+
+.filterLinks{
+	text-decoration:none;
+	font-size: 10px;
+}
+
+#custom-m-small {
+width: 450px;
+}
+
+#pad-left {
+margin-left:40px;
+}
+
+.importers{
+width:100% !important;
+}

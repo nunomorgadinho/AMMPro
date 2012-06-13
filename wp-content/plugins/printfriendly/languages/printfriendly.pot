@@ -1,0 +1,229 @@
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/printfriendly\n"
+"POT-Creation-Date: 2011-07-21 12:31:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: pf.php:290
+msgid "The text size you entered is too high, please stay below 25px."
+msgstr ""
+
+#: pf.php:296
+msgid ""
+"The color you entered is not valid, it must be a valid hexadecimal RGB font "
+"color."
+msgstr ""
+
+#: pf.php:310
+msgid "PrintFriendly Options"
+msgstr ""
+
+#: pf.php:310
+msgid "PrintFriendly"
+msgstr ""
+
+#: pf.php:320
+msgid "Need Help?"
+msgstr ""
+
+#: pf.php:321
+msgid "Be sure to check out the %s!"
+msgstr ""
+
+#: pf.php:321
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: pf.php:358
+msgid "Settings"
+msgstr ""
+
+#: pf.php:529
+msgid "PrintFriendly Settings"
+msgstr ""
+
+#: pf.php:537
+msgid "Pick a Button and/or Text"
+msgstr ""
+
+#: pf.php:541
+msgid "Pick Your Button Style"
+msgstr ""
+
+#: pf.php:554
+msgid "Custom Image URL"
+msgstr ""
+
+#: pf.php:556
+msgid ""
+".JPG .GIF or .PNG Absolute (http://www.example.com/...), or Relative (/wp/wp-"
+"content/uploads/example.png)"
+msgstr ""
+
+#: pf.php:562
+msgid "Button Text"
+msgstr ""
+
+#: pf.php:567
+msgid "Style the Button and Text"
+msgstr ""
+
+#: pf.php:571
+msgid "Text Color"
+msgstr ""
+
+#: pf.php:575
+msgid ""
+"Use the color picker, or enter a valid hex color in the color picker input "
+"box."
+msgstr ""
+
+#: pf.php:579
+msgid "Text Size"
+msgstr ""
+
+#: pf.php:582 pf.php:588
+msgid "In pixels (px)"
+msgstr ""
+
+#: pf.php:586
+msgid "Margin"
+msgstr ""
+
+#: pf.php:588 pf.php:603
+msgid "Left"
+msgstr ""
+
+#: pf.php:589 pf.php:604
+msgid "Right"
+msgstr ""
+
+#: pf.php:590
+msgid "Top"
+msgstr ""
+
+#: pf.php:591
+msgid "Bottom"
+msgstr ""
+
+#: pf.php:596
+msgid "Button Placement"
+msgstr ""
+
+#: pf.php:600
+msgid "Horizontal Alignment"
+msgstr ""
+
+#: pf.php:602
+msgid "None"
+msgstr ""
+
+#: pf.php:605
+msgid "Center"
+msgstr ""
+
+#: pf.php:609
+msgid "Vertical Position"
+msgstr ""
+
+#: pf.php:611
+msgid "Before Content"
+msgstr ""
+
+#: pf.php:612
+msgid "After Content"
+msgstr ""
+
+#: pf.php:616
+msgid "Add PrintFriendly To"
+msgstr ""
+
+#: pf.php:618
+msgid "Homepage, Archives, Posts, and Pages"
+msgstr ""
+
+#: pf.php:619
+msgid "Posts and Pages"
+msgstr ""
+
+#: pf.php:620
+msgid "Posts"
+msgstr ""
+
+#: pf.php:621
+msgid "Manual"
+msgstr ""
+
+#: pf.php:623
+msgid "Copy and paste the code below anywhere in your template pages."
+msgstr ""
+
+#: pf.php:630
+msgid "Other Settings"
+msgstr ""
+
+#: pf.php:634
+msgid "CSS Stylesheet"
+msgstr ""
+
+#: pf.php:636
+msgid "Add CSS to pages"
+msgstr ""
+
+#: pf.php:638
+msgid ""
+"If you uncheck this box you have to add the styling for the PrintFriendly "
+"button to your theme's stylesheet."
+msgstr ""
+
+#: pf.php:643
+msgid "JavaScript"
+msgstr ""
+
+#: pf.php:645
+msgid "JavaScript Fallback"
+msgstr ""
+
+#: pf.php:647
+msgid ""
+"If you uncheck this box users without JavaScript will be unable to use the "
+"PrintFriendly service."
+msgstr ""
+
+#: pf.php:649
+msgid "Include JavaScript"
+msgstr ""
+
+#: pf.php:651
+msgid ""
+"If you uncheck this box, all buttons will become links to the PrintFriendly "
+"webservice and the PrintFriendly JavaScript will not be loaded on your site."
+msgstr ""
+
+#: pf.php:658
+msgid "Save Options"
+msgstr ""
+
+#: pf.php:659
+msgid "Cancel"
+msgstr ""
+
+#: pf.php:662
+msgid "Like PrintFriendly?"
+msgstr ""
+
+#: pf.php:662
+msgid "Give us a rating"
+msgstr ""
+
+#: pf.php:662
+msgid "Need help or have suggestions?"
+msgstr ""

@@ -1,0 +1,8 @@
+ul.wwIconified{ list-style: none; margin: 0; padding: 0; }
+ul.wwIconified li{ overflow: hidden; padding: 5px; margin-bottom:5px; width: 140px; display: inline-block }
+ul.wwIconified li:hover{ background-color: #f4f4f4; }
+ul.wwIconified li p{ font-family: verdana, sans-serif; font-size: 12px; float: left; margin: 0; }
+ul.wwIconified li input.File{ display: none; }
+ul.wwIconified li button.RemoveButton{ border: none; background: transparent url(../images/delete.png) no-repeat scroll 0 7px; margin: 0; cursor: pointer; float: right; vertical-align: bottom; height: 30px; width: 16px; }
+ul.wwIconified li button.RemoveButton span{ display: none; }
+/*ul.wwIconified img { display: none;}*/

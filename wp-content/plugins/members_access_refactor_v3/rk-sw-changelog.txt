@@ -1,0 +1,19 @@
+WPEC Refactor v3
+
+Changelog to track changes / bug fixes / updates
+
+RK SW: 30.03.12 / 02:11 / widgets > my-subscriptions.php
+Steve added a function to display My Subscription in My Account. He shares the other functions in this file and displays them using themes > Dynamix-Child > wpsc-user-log.php
+
+WPEC MO: 02.04.12 / 07.04.12 / wpec_members_access_admin.php
+02.04.12: I changed the cancel / end of sub email message and from in Refactor v2.2 because it wasn't done well.
+07.04.12: Dev supplied new file. Will test to see how this implements.
+
+WPEC MO: 07.04.12 / 17:57 / wpec_members_access.php
+Changed version number so I can track which plugin is installed in WP
+
+WPEC MO: 06.04.12 / 19:20 / wpec_members_admin_display.php
+Dev supplied new file. Will test to see how this implements.
+
+WPEC MO: 06.04.12 / 19:53 / wpec_members_access_admin.php
+Dev supplied new file. Will test to see how this implements.

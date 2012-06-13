@@ -1,0 +1,12 @@
+#general_panel table {
+	width: 100%;
+}
+
+.panel_wrapper div.current {
+	height: auto;
+}
+
+textarea#text {
+	width: 100%;
+	height: 100px;
+}

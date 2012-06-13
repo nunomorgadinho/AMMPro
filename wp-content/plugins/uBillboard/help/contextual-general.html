@@ -1,0 +1,18 @@
+<h3>General Options</h3>
+<p>These options apply to all uBillboard instances on this particular WordPress site.</p>
+<dl>
+	<dt>JavaScript Compression</dt>
+	<dd>Check if you want to use the compressed version of uBillboard.js on the frontend. This is the default
+	setting. Uncheck only if you have made changes to the uncompressed version of the JS and don't want to
+	recompress it yet. Otherwise you should always use the compressed version. It is much smaller and will
+	help your site load faster.</dd>
+	
+	<dt>Shortcode Optimization</dt>
+	<dd>This option, if checked, will optimize uBillboard asset loading by intelligently detecting if uBillboard
+	shortcode is used on the page that is currently being loaded, and loading the assets accordingly. So in most
+	common case, when you use uBillboard only on the front page, it will shave of around 50KB off every page that
+	does not have uBillboard. This can increase your page load time on those pages. On the other hand, you should
+	only apply this option if you are using shortcodes as the only way of including uBillboard into your page. 
+	Checking this option while using a PHP function in the code to load uBillboard <em>will</em> break it on that 
+	page.</dd>
+</dl>

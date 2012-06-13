@@ -1,0 +1,548 @@
+/*----------------------------------------------------------------------------- 
+
+	-	MINISLIDER -
+
+Screen Stylesheet 
+
+version:   	1.0 
+date:      	10/06/11 
+author:		freshline
+email:     	support@version-four.com 
+website:   	http://www.version-four.com
+-----------------------------------------------------------------------------*/
+
+
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+/*-----------------------------------------
+	-	Shadow Effects for the Banner -
+-------------------------------------------*/
+.shadow1 {	
+	-webkit-box-shadow: 0px 40px 55px -20px #000;
+	-moz-box-shadow: 0px 40px 55px -20px #000;
+	box-shadow: 0px 40px 55px -20px #000;
+}
+
+.shadow2 {
+	-webkit-box-shadow: inset 0px 0px 6px 2px #000;  
+	-moz-box-shadow: inset 0px 0px 6px 2px #000;  
+	box-shadow: inset 0px 0px 6px 2px #000; 
+}
+
+.shadow3 {
+	-webkit-box-shadow: 30px 10px 60px -20px #000;
+	-moz-box-shadow: 30px 10px 60px -20px #000;
+	box-shadow: 30px 10px 60px -20px #000;	
+}
+
+.shadow4 {
+	-webkit-box-shadow: 0px 0px 49px 0px #ebf5f3;
+	-moz-box-shadow: 0px 0px 49px 0px #ebf5f3;
+	box-shadow: 0px 0px 49px 0px #ebf5f3;
+}
+
+.shadow5 {
+	-webkit-box-shadow: 30px 10px 60px -20px #1c3a65;
+	-moz-box-shadow: 30px 10px 60px -20px #1c3a65;
+	box-shadow: 30px 10px 60px -20px #1c3a65;
+}
+
+
+/*******************************
+	-	CONTENT BLOCKS    -
+********************************/
+/*The Blocks are calculated via % values. There is a Excel sheet included in the CSS folder if you want to change this quickly*/
+.full,.one_half, .one_third, .two_third,.two_fourth, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth{
+	margin-right: 0%; position:relative; float:left; text-align:left;
+}
+.one_half{ width:50%; }
+.one_third{width:32%;}
+.one_fourth{width:23.5%; }
+.one_fifth{width: 18.4%;}
+.one_sixth {width: 15%;}
+
+.two_third{width: 64%;}
+.two_fourth {width: 47%;}
+.two_fifth {width: 36.8%;}
+.two_sixth {width: 30%;}
+
+.three_fourth{width:70.5%;}
+.three_fifth {width: 55.2%;}
+.three_sixth {width: 45%;}
+
+.four_fifth {width: 79%;}
+.four_sixth {width: 60%;}
+
+.five_sixth {width: 75%;}
+.last{ margin-right:0 !important; clear:right; }
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+
+													-	 MINSLIDER THEMES & MORE SETTINGS -						
+	
+-------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+.minislider_portfolio ul >li, .minislider_pricebox ul >li, .minislider_shorty ul >li , .minislider_vintage ul >li, .minislider_blog ul >li,  .minislider_pricebox_ii ul >li {
+  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; 
+  list-style:none;   
+  
+ }
+ 
+ /*****************************************
+	- ANY CUSTOM SETTINGS HERE  -
+******************************************/ 
+ .minislider_portfolio .slidesholder, .minislider_pricebox .slidesholder, .minislider_shorty .slidesholder {	
+	
+ }
+ 
+
+ .liftme {
+	position:absolute;
+ }
+ 
+ 
+/***************************************************************************************************
+
+							- PORTFOLIO ROTATOR THEME CLASS - 
+			
+****************************************************************************************************/
+							  
+					 /*****************************************
+						- THE INSIDE SHADOW ON THE SLIDES -
+					******************************************/ 
+							 .minislider_portfolio .insideshadow{
+								-webkit-box-shadow: inset 2px 0px 20px 2px #333;
+								-moz-box-shadow: inset 2px 0px 20px 2px #333;
+								box-shadow: inset 2px 0px 20px  2px #333;
+							 }
+							 							
+					 /*****************************************
+						- THE INSIDE REFLECTION ON THE SLIDES -
+					******************************************/ 
+							 .minislider_portfolio .frame_custom_reflection {  
+									background:url(../assets-portfolio/reflex_morelight.png) no-repeat 100% 100%; 		
+							}			/* The Glas Effect PNG File Source */
+
+					
+					/************************************************************
+							-	THE HOVER AND NORMAL CONTENT SIZE SLIDER    -
+					*************************************************************/
+					.minislider_portfolio .normal_content{
+						height:270px;
+					}
+
+					.minislider_portfolio .hover_content{
+						height:270px;
+}
+
+					 /*****************************************
+						- THE HOVER COVER PNG IMAGE  -
+					******************************************/ 
+							.minislider_portfolio .hovercover{
+								background:url(../assets-portfolio/pic_hover.png);		
+							}
+
+
+					/*****************************************************************
+						- THE BACKGROUND AND STYLE OF THE GREY BOX UNDER THE SLIDE -
+					******************************************************************/ 
+							.minislider_portfolio .toolbar{   								  
+								 background:url(../assets-portfolio/pattern/pattern_grey.jpg); 
+								 height:35px;  
+								 margin-top:1px;
+								 -webkit-border-bottom-left-radius: 5px;
+								 -webkit-border-bottom-right-radius: 5px;
+								 -moz-border-radius-bottomleft: 5px;
+								 -moz-border-radius-bottomright: 5px;
+								 border-bottom-left-radius: 5px;
+								 border-bottom-right-radius: 5px;							 
+							}
+														
+
+					/*******************************************************
+						- THE TITLE TEXT ON THE GREY BOX UNDER THE SLIDE -
+					********************************************************/ 
+							.minislider_portfolio .toolbar .title{   
+							 font-family: 'Istok Web', sans-serif;
+							 font-size: 14px;
+							 color:#9f9f9f;  
+							 text-align:center;
+							 padding-top:8px;
+							}
+
+
+
+					/*****************************************
+						- READ MORE BUTTON ON THE SLIDES -
+					******************************************/ 
+							
+
+							.minislider_portfolio .hover_readmore {
+								text-decoration:none;															
+								margin-left:auto;
+								margin-right:auto;									
+								text-align:center;														
+							}
+
+
+
+
+					/*****************************************
+						- TITLE BY HOVER  ON THE SLIDES -
+					******************************************/ 
+							.minislider_portfolio .hover_title{
+								font-family: 'Istok Web', sans-serif;
+								padding-left:10px;
+								padding-right:10px;
+								margin-top:20px;						
+								text-align:center;
+								font-size:16px;
+							}
+							
+							.minislider_portfolio .button {
+								margin-top:20px;
+							}
+
+					/*****************************************
+						- DIVIDER BY HOVER  ON THE SLIDES -
+					******************************************/ 
+							.minislider_portfolio .hover_divider{			
+								width:80%;
+								height:1px;
+								margin-left:auto;
+								margin-right:auto;
+								margin-top:20px;
+							}
+
+					/*****************************************
+						- CONTENT BY HOVER  ON THE SLIDES -
+					******************************************/ 
+							.minislider_portfolio .hover_cont{
+								font-family: 'Istok Web', sans-serif;
+								padding:20px;	
+								color:#fff;
+								font-size:12px;
+								line-height:13px;
+							}
+
+
+
+
+/*****************************************
+	- DIVIDER BY HOVER  ON THE SLIDES -
+******************************************/ 
+.fh_mini_slider .hover_divider{
+	background:url(../assets-portfolio/pic_separator.jpg);
+	width:80%;
+	height:2px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
+
+/*****************************************
+	- CONTENT BY HOVER  ON THE SLIDES -
+******************************************/ 
+.fh_mini_slider .hover_cont{
+	font-family: 'Istok Web', sans-serif;
+	padding:20px;	
+	color:#fff;
+	font-size:12px;
+	line-height:13px;
+}
+
+
+
+
+
+
+/*****************************************
+	- THE CONTROLLER OF THE SLIDES -
+******************************************/ 
+
+.controller{ 
+  position:absolute;
+  cursor:pointer;
+  z-index:200;   
+}
+
+
+
+/*****************************************
+	- The WHITE ToolBox -
+*****************************************/
+
+.toolbox-white{
+  width:58px;
+  height:22px;
+  background:url(../assets-portfolio/pattern/pattern_body_grey.jpg); 
+  padding:5px;
+   -webkit-border-radius:5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 4px -2px #000;
+  -moz-box-shadow: inset 0px 0px 4px -2px #000;
+  box-shadow: inset 0px 0px 4px -2px #000; 
+}
+
+
+.toolbox-white .leftbutton{
+  background:url(../assets-portfolio/navigation/nextprev_project.png) no-repeat right bottom;
+  width:27px;
+  height:22px;
+  float:left;  
+  margin-left:30px; 
+  position:relative;
+}
+
+.toolbox-white .rightbutton{
+  position:relative;
+  background:url(../assets-portfolio/navigation/nextprev_project.png) no-repeat left bottom;
+  width:27px;
+  height:22px;  
+}
+
+
+
+
+
+/******************************************
+	- LEFT / RIGHT BUTTON ANIMATION - 
+******************************************/
+
+
+.leftbutton:hover{
+  background-position:right top;
+}
+
+
+.rightbutton:hover{
+  background-position:left top;
+}
+
+
+
+
+/*******************************************
+	- BUTTONS LIKE READ ME / SHOW ME - 
+*******************************************/
+
+.button {
+	-webkit-border-radius:5px;
+	   -moz-border-radius:5px;
+	        border-radius:5px;
+	text-decoration:none;
+	}
+
+a.button { 
+	background-color:#333; 
+	text-decoration:none;
+}
+
+.button, 
+.button span { display: inline-block; }
+.button	{
+	position:relative;
+	zoom:1; /* zoom and *display = ie7 hack for display:inline-block */
+	font-family: 'Istok Web', sans-serif;
+	overflow: visible; 
+	line-height:1em;
+	border: 1px solid #999;/* IE Hack*/
+	border: rgba(0, 0, 0, .2) 1px solid;/* Safari 4+, Chrome, FF3.5+ */
+	border-bottom:rgba(0, 0, 0, .1) 1px solid;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	outline: none;
+	white-space: nowrap;
+	cursor: pointer;
+
+	/* FF3.5+ */
+	background: -moz-linear-gradient(
+		center top,
+		rgba(255, 255, 255, .1) 0%,
+		rgba(0, 0, 0, .1) 100%
+);
+
+	/* Safari 4+, Chrome */
+	background: -webkit-gradient(
+		linear,
+		center bottom,
+		center top,
+		from(rgba(0, 0, 0, .1)),
+		to(rgba(255, 255, 255, .1))
+);
+
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000'); /* IE6,IE7 */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')"; /* IE8 */
+-moz-user-select: none;
+-webkit-user-select:none;
+-khtml-user-select: none;
+user-select: none;
+	}
+
+button::-moz-focus-inner { border: none; /* overrides extra padding on sides FF3.5 */ }
+
+button.button  { margin:0; padding:0px; }
+.button.full, 
+.button.full span { display: block; }
+.button:hover, 
+button.button:hover, 
+.button.hover 		{
+			/* FF3.5 */
+			background: -moz-linear-gradient(
+				center top,
+				rgba(255, 255, 255, .2) 0%,
+				rgba(255, 255, 255, .1) 100%
+			);
+			/* Safari4+, Chrome */
+			background: -webkit-gradient(
+				linear,
+				center bottom,
+				center top,
+				from(rgba(255, 255, 255, .1)),
+				to(rgba(255, 255, 255, .2))
+			);		
+			filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF')"; /* IE8 */
+			}
+
+button.button:active,
+.button:active, 
+.button.active  {
+			top:1px;
+			/* FF3.5 */
+			background: -moz-linear-gradient(
+				center top,
+				rgba(0, 0, 0, .1) 0%,
+				rgba(255, 255, 255, .1) 100%
+			);
+			/* Safari4+, Chrome */
+			background: -webkit-gradient(
+				linear,
+				center bottom,
+				center top,
+				from(rgba(255, 255, 255, .1)),
+				to(rgba(0, 0, 0, .1))
+			);
+			filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19000000', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19000000', EndColorStr='#19FFFFFF')"; /* IE8 */
+		}
+
+
+.button span	{
+	position: relative;
+	padding:0.6em 1.3em;
+	border-top:1px solid rgba(255, 255, 255, 0.1);
+	line-height:1em;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:0 1px 1px rgba(0, 0, 0, 0.35);
+	white-space: nowrap;
+	color:#fff;
+	}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari, Google Chrome margin fix */
+	button.button span {
+		margin-top: -1px;
+		margin-left:-2px;
+		margin-right:-2px;
+	}
+}
+.button.small span 	{ font-family:"Oswald", Arial, Verdana, sans-serif; font-size:10px; text-transform:uppercase; }
+.button.medium span { font-family:"Oswald", Arial, Verdana, sans-serif; font-size:14px; text-transform:uppercase; }
+.button.large span 	{ font-family:"Oswald", Arial, Verdana, sans-serif; font-size:20px; text-transform:uppercase; }
+
+a.button:hover 		{ background-color:#444; text-decoration:none;}
+button.button:hover { background-color:#444; text-decoration:none;}
+
+
+
+
+
+/*******************************
+   - ALL PREDEFINED COLORS  -
+********************************/  
+
+.gray,p.dropcap_gray:first-letter         
+{ color: #a3a8ab; } 
+
+.lightgray, p.dropcap_lightgray:first-letter	  								
+{ color: #93979a;}
+
+.red, p.dropcap_red:first-letter          
+{ color: #ED7486 !important; } 
+
+.yellow, p.dropcap_yellow:first-letter      
+{ color: #F6D078 ;} 
+
+.blue, p.dropcap_blue:first-letter		  
+{ color: #74C5ED;} 
+
+.green, p.dropcap_green:first-letter        
+{ color: #93ce41; } 
+
+.darkgreen, p.dropcap_green:first-letter        
+{ color: #6b8a16; } 
+
+.gold, p.dropcap_gold:first-letter         
+{ color: #AEA87E; } 
+
+.white, p.dropcap_white:first-letter         
+{ color: #fff; } 
+
+.darkwhite, p.dropcap_white:first-letter         
+{ color: #b8b8b8; } 
+
+.vintage, p.dropcap_white:first-letter         
+{ color: #f9eee1; } 
+
+.brown, p.dropcap_white:first-letter         
+{ color:#453927; } 
+
+
+/****************************************
+	- ALL PREDEFINED BACKGROUNDCOLORS -
+******************************************/
+.back_gray      { background-color: #a3a8ab; } 
+.back_lightgray	{ background-color: #93979a; }
+.back_red       { background-color: #ED7486;} 
+.back_yellow    { background-color: #F6D078 ; } 
+.back_blue      { background-color: #74C5ED; } 
+.back_green     { background-color: #93ce41; } 
+.back_darkgreen     { background-color: #6b8a16; } 
+.back_gold      { background-color: #AEA87E; } 
+.back_white     { background-color: #fff; } 
+
+
+
+/****************************************
+	- ALL PREDEFINED BUTTON COLORS -
+******************************************/
+
+.button.gray         { background-color: #a3a8ab; } 
+.button.gray:hover   { background-color: #a3a8ab; }
+ 
+.button.red          { background-color: #ED7486; } 
+.button.red:hover    { background-color: #ED7486; }
+
+.button.yellow       { background-color: #F6D078 ; } 
+.button.yellow:hover { background-color: #F6D078 ; }
+
+.button.blue         { background-color: #74C5ED;} 
+.button.blue:hover   { background-color: #74C5ED; }
+
+.button.green        { background-color: #93ce41; } 
+.button.green:hover  { background-color: #93ce41; }
+
+.button.gold        { background-color: #AEA87E; } 
+.button.gold:hover  { background-color: #AEA87E; }

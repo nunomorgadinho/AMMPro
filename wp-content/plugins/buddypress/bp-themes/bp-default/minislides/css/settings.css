@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*****************************************
+	- THE CONTROLLER OF THE SLIDES -
+******************************************/ 
+.controller{ 
+  position:absolute; cursor:pointer; z-index:200;}
+.toolbox-shorty{
+  position:absolute; background-color:#ff0000; top:120px; margin-left:-15px; width:100%; height:0px;} 
+html {
+	-webkit-font-smoothing: subpixel-antialiased;}  
+/******************************************************************************************************
+							-  THE SHORTY THEME CLASS-
+*******************************************************************************************************/
+
+
+/***************************
+							- THE LEFT SIDE TITLES -
+***************************/
+.minislider_shorty .shorty_title {font:1.6em/1 Georgia, "Times New Roman", Times, serif; padding:15px 0 0 20px; position:relative;}
+.minislider_shorty .shorty_title_2 {font-family: 'Poly', sans-serif; color:#fff; font-size:14px; text-align:center; position:relative;}
+
+/***************************
+							- THE QUOTE FUNCTION -
+***************************/
+.minislider_shorty .quote {position:relative;}
+.minislider_shorty blockquote p {font:normal .9em/1.5em Georgia, "Times New Roman", Times, serif; padding:5px 0 0 20px; color:#534741; background: transparent; text-align:left; width:350px;}
+.minislider_shorty blockquote span.open {
+	position: absolute; /*top: 10px; left: -30px;*/ margin-left:-28px; margin-top:10px; font-size: 4em; text-shadow: none;}
+.minislider_shorty blockquote span.close {
+	position: absolute; margin-left:3px; margin-top:30px; /*bottom: -30px;right: -30px;*/ font-size: 4em; text-shadow: none;}
+.minislider_shorty blockquote {/*padding-left:10px; padding-right:10px;*/ font-size: 18px; position:relative; text-align:center;}
+
+/*******************************
+							- SHOW MORE / HIDE BUTTONS -
+*********************************/
+.minislider_shorty .shorty_more_style {bottom:0; right:0px; clear:both; position:absolute; padding:10px 20px 10px 10px; margin:0 7px 25px 0; color:#ccc; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; font:.9em/1 Arial, Helvetica, sans-serif; text-transform:uppercase;}
+.minislider_shorty .shorty_hide_style {bottom:0; left:-18px; clear:both; position:absolute; padding:10px 10px 10px 20px; margin:0 0 25px 7px; color:#444; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; font:.9em/1 Arial, Helvetica, sans-serif; text-transform:uppercase;}
+.minislider_shorty .shorty_more_style_2 {text-align:center; margin-top:8px;}
+.minislider_shorty .shorty_more_style:hover {cursor:pointer; color:#fff;}
+.minislider_shorty .shorty_hide_style:hover {cursor:pointer; color:#fff;}
+.minislider_shorty .shorty_back {position:absolute; float:right; margin-right:30px; margin-bottom:12px; bottom:0px; right:0px;}
+
+/***************************
+							- THE FULL CONTENT -
+***************************/						
+/******************* VER 1 FULL CONTENT **********************/
+.minislider_shorty .ssc1 .shorty_full_content {display:none; padding-left:10px; padding-right:10px; margin-left:-28px; background:url(../assets-full/shorty/salesimg.png) -15px bottom  no-repeat;}
+.minislider_shorty .ssc2 .shorty_full_content {display:none; padding-left:10px; padding-right:10px; margin-left:-28px; background:url(../assets-full/shorty/businessdirimg.png) -15px bottom  no-repeat;}
+.minislider_shorty .shorty_full_extra {padding:none !important; margin-left:0px;}
+.minislider_shorty .shorty_video {margin-top:30px; padding-right:30px;}
+.minislider_shorty .ssc1 .shorty_title_more {margin:20px 0 0 330px;}
+.minislider_shorty .ssc2 .shorty_title_more {margin:0 0 0 300px;}
+.minislider_shorty .shorty_title_more h2 {font:1.4em/1.3em "futura-pt", Arial, Helvetica, sans-serif; padding:.5em 0 0 0; color:#f1f1f1; text-transform:inherit; text-shadow:-1px -1px 0px #4a2524;} 
+.minislider_shorty .shorty_title_more h3 {font:1.4em/1.3em "futura-pt", Arial, Helvetica, sans-serif; padding:.5em 0 0 0; color:#f1f1f1; text-transform:inherit; text-shadow:-1px -1px 0px #4a2524;}
+.minislider_shorty .shorty_title_more p {font:.9em/1.4em Georgia, "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif; color:#e6e6e6; width:160px; padding:.2em 0 .5em 0;} 
+.minislider_shorty .shorty_title_more p + h2 {padding-left:10px;}
+.minislider_shorty .shorty_title_more p + h2 + p {padding-left:10px;}
+.minislider_shorty .shorty_title_more p + h2 + p + h2 {padding-left:20px;}
+.minislider_shorty .shorty_title_more p + h2 + p + h2 + p {padding-left:20px;}
+.minislider_shorty .shorty_divider {height:1px; width:100%; margin-top:20px; margin-bottom:30px;}
+/******************* VER 2 FULL CONTENT **********************/										
+.minislider_shorty .shorty_title_more_2 {font-family: 'Poly', sans-serif; font-size:26px; margin-top:28px; float:left;}
+.minislider_shorty .tag {float:right; margin-top:20px; width:60px; height:60px; font-size:12px; padding-top:15px; text-align:center;}
+.minislider_shorty .shorty_left_text {clear:both; padding-top:10px;}
+.minislider_shorty .shorty_right_text {clear:both; padding-top:13px; padding-right:30px; font-size:12px;}
+.minislider_shorty .shorty_price {background:url(../assets-full/wine/icon/shop.png) no-repeat 0px 13px; padding-left:50px; padding-top:0px; float:left; font-size:40px;}
+.minislider_shorty .shorty_price_small_info {clear:both; font-size:10px;}
+.minislider_shorty .shorty_purchase {margin-top:11px; float:right;}
+.minislider_shorty .shorty_wherefrom {font-family: 'Poly', sans-serif; position:absolute; bottom:0px; margin-bottom:10px; margin-left:24px; background:url(../assets-full/wine/icon/map.png) no-repeat 0px 0px; padding-top:5px; padding-bottom:10px; padding-left:50px; float:left; font-size:12px;}
+
+/******************* CHPMN added styles **********************/
+.ssc1 .slide {background:url(../assets-full/shorty/salesdb.jpg) no-repeat;}	
+	.ssc1 .normal_bg {background:url(../assets-full/shorty/scc1quote.png) 0 bottom no-repeat; height:255px;}
+		/*.ssc1 > div + div {background:none;}*/
+.ssc2 .slide {background:url(../assets-full/shorty/busdir.jpg) no-repeat;}
+	.ssc2 .normal_bg {background:url(../assets-full/shorty/scc2quote.png) 0 bottom no-repeat; height:255px;}
+		/*.ssc2 > div + div {background:none;}*/
+.ssc1 .shorty_title {color:#70161A;}
+.ssc1 .shorty_more_style {background:#4d4d4d;}
+.ssc2 .shorty_more_style {background:#663333;}
+
+.ssc1 .shorty_hide_style {background:#ccc9ba;}
+.ssc2 .shorty_hide_style {background:#d0caaa;}

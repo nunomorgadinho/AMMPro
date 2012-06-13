@@ -1,0 +1,106 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body {
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+#wrapper {
+	width: 940px;
+	margin: auto;
+}
+
+.section {
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+p {
+	line-height: 1.4em;
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style: disc inside;
+	margin-bottom: 20px;
+}
+
+ol {
+	list-style: decimal inside;
+	margin-bottom: 20px;
+}
+
+li {
+	line-height: 1.4em;
+}
+
+code, pre {
+	display: block;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	background-color: #eee;
+	padding: 5px 5px; 
+	margin-bottom: 10px;
+}
+
+#footer {
+	border-top: 1px solid #333;
+	padding-top: 20px; 
+	margin-bottom: 30px;
+}

@@ -1,0 +1,56 @@
+19/08/2009	Release 0.3.16
+	Fixed bug with radio buttons showing their config instead of options.
+	Added some FAQs to the readme file.
+11/08/2009	Release 0.3.15
+	Fixed bug with custom fields joining.  Sorry everyone.
+10/08/2009	Release 0.3.14
+	Added all option for custom fields
+	Corrected short code syntax.
+	Added AtLeast and MoreThan joiners
+10/07/2009	Release 0.3.13
+	Added in post type joiner field
+	Added in paypal donate link
+	Added in Pierre's french translation
+	Corrected James' bug with preset names
+	Merged in alternative category joining
+24/05/2009	Release 0.3.12
+	Fixed flexbox integration for compatibility with newer version of jquery.
+24/05/2009	Release 0.3.11
+	Fixed typo in variable name which was preventing more than fields from working.
+29/04/2009	Release 0.3.10
+	Fixed incompatibility between real estate bridge and certain wordpress installs.
+24/04/2009	Release 0.3.9
+	Fixed Apache v1 config issue (Thanks to Petros for help in tracking this one down)
+23/04/2009	Release 0.3.8
+	Fixed IE config issue (Thanks to www.smesa.co.za for help in tracking this one down)
+17/04/2009	Release 0.3.7
+	Fixes a couple of show stopping bugs reporting by sheme
+14/04/2009	Release 0.3.6
+	Added hidden constants field type.
+10/04/2009
+	Sorts drop down options 
+	Allows use of multiple category inputs
+30/03/2009	Release 0.3.5
+	Fixed short tags in templates (thanks to Dr North)
+	Fixed bug in loading of search templates.
+23/03/2009	Release 0.3.4
+	Fixed bug whereby the global namespace was being polluted during the initialisation, preventing theme and plugin editing.
+23/03/2009	Release 0.3.3
+	Added tag syntax for placing search forms in posts.
+23/03/2009	Release 0.3.2
+	Added Wordpress.org format readme file.
+23/03/2009	Release 0.3
+	Added presets functionality
+20/03/2009
+	Works when run via a rewritten URL (in some cases anyway)
+	Compatible with WP 2.7 and jQuery 1.2.3
+18/03/2009 
+	Drop down values with quotes are re-selected in the search form after search.
+	Back end field suggestions fixed for PHP4
+17/03/2009 
+	Made a more sensible default form and hides the form parameters until clicked to produce a slightly less daunting interface
+	Automatic drop downs only populated from live fields.
+	Corrected a problem with defaults in PHP4 
+	Always joins for certain search types, prevents un-typed content appearing in searches with no parameters/
+
+12/03/2009	Initial Release 0.1

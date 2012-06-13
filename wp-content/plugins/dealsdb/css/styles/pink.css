@@ -1,0 +1,66 @@
+@import url("master.css"); 
+
+.header h1 a { color: #000; text-decoration: none; }
+.header p { background: #F8F8F8; border: solid 10px #F8F8F8; color: #000; font-size: 14px; margin: 0px; }
+.header_right a { font-size:10px; color:#666 }
+
+#nav li ul li { border-bottom:1px solid #EEEEEE; border-width:0 1px 1px; background:#F8F8F8 }
+
+#catnav a { padding: 5px 10px; display: block; text-decoration: none; color: #005870; z-index:100 }
+#catnav li.current-cat a { background-color:#EEEEEE; display:block; padding:5px 10px; }
+#catnav li a:hover { background: #E3E3E3; }
+#catnav li ul li { border-bottom:1px solid #EEEEEE; border-width:0 1px 1px; background:#FFFFFF }
+
+.topbar { border-top: solid 1px #666666; border-bottom: solid 1px #666666; background: url(pink/topbarbg.jpg) repeat-x center top; margin: 20px 0 0 0; padding: 10px 0 10px 0; }
+.search { width: 404px; height: 49px; background: url(pink/searchbg.jpg) no-repeat center top; float: left; }
+.postbutton { float: right; width: 231px; background: url(pink/postbuton.jpg) no-repeat center top; display: block; font-size: 17px; color: #ffffff; text-decoration: none; text-align: center; padding: 12px 0 16px 0; outline: none; }
+
+.main { border: solid 20px #EEEEEE; }
+.ins { background: #EEEEEE; }
+
+.listing .head {font-size: 17px; color: #ffffff; padding: 10px 0 13px 0; background: url(pink/headbg.jpg); }
+
+.list div a { text-decoration: none; color: #666666;  }
+.list div.no { background: #F8F8F8; }
+.list div.no:hover,.list div.alt:hover, #sticky:hover { background-color: #FFE8E8; }
+.list div.alt { background: #EEEEEE; }
+
+.footer { border: solid 20px #EEEEEE; background: #EEEEEE; width: 940px; margin: 20px auto 0px auto; color: #666666; }
+.footer a { color: #666666; }
+
+.left .title h2 { font-size: 28px; font-family: 'Arial', 'Trebuchet MS', 'Verdana', sans-serif; font-weight: bold; line-height: 30px; width: 400px; float: left; color: #666666; }
+.left .title .prices { background: #FF5F5F; float: right; max-width:150px; padding: 15px; line-height: 30px; font-size: 35px; font-family: 'Arial', 'Trebuchet MS', 'Verdana'; color: #ffffff;}
+.left .product h3 { font-size: 17px; font-weight: bold; line-height: 17px; font-family: 'Arial', 'Trebuchet MS', 'Verdana'; color: #586B70; border-bottom: solid 1px #DDDDDD; padding-bottom: 5px; clear:both; }
+
+.ins .right { width: 270px; float: right; border: solid 15px #DDDDDD; background: #DDDDDD; }
+.ins .right h2 { color:#666666; font-family:Arial,Verdana; font-size:17px; font-weight:bold; margin:0; padding:7px 0; text-align:center; border-bottom:1px solid #CCCCCC; }
+.ins .right h1 { color:#666666; font-family:'Arial','Trebuchet MS','Verdana'; font-size:22px; font-weight:bold; margin:0; padding:7px 0; border-bottom:1px solid #CCCCCC; }
+
+.classform { background: #EEEEEE; padding: 20px; width: 940px; margin: 20px auto 0; }
+.classform .adfields { border: solid 1px #CCCCCC; padding: 5px; margin-bottom: 10px; }
+.classform select { margin-bottom: 10px; padding: 5px; border: solid 1px #CCCCCC; width:200px; }
+.classform input.postit { border: solid #ffffff; padding:5px; font-size: 17px; color: #ffffff; background: #FF5F5F; cursor: pointer; }
+input.lbutton { background:#FF5F5F none repeat scroll 0 0; border:none; font-weight:bold; color:#FFFFFF; cursor:pointer; font-size:13px; padding:5px; }
+
+.button2 { background: url(pink/post-now.jpg) top center no-repeat; width:148px; height:41px; }
+
+.post_head_button { background: url(pink/post-now.jpg) top center no-repeat; width:148px; height:41px; }
+.next_post_link { background: url(pink/next.jpg) top center no-repeat; width:119px; height:33px; }
+.previous_post_link{background:url(pink/back.jpg) top center no-repeat; width:119px; height:33px}
+
+.email_form{color:#375158;}
+.email_form a{font-size:17px; font-family:'Arial','Trebuchet MS','Verdana',sans-serif; background:url(pink/email.png) 35px 3px no-repeat; font-weight:bold; display:block; text-decoration:none; text-align:center; color:#666}
+.email_form input{margin-bottom:5px; background-color:#EEE; border:1px #ccc solid; padding:2px 5px; width:228px}
+.email_form textarea{margin-bottom:5px; background-color:#EEE; border:1px #ccc solid; padding:5px; width:228px; height:150px}
+#email_form_data {padding:0 0 10px 15px;}
+input.email_captcha{vertical-align:middle; width:30px; text-align:center; border:1px #DF0005 solid; padding:2px}
+
+.like_input{margin-bottom:5px; background-color:#EEE; border:1px #ccc solid; padding:3px 5px; width:228px}
+
+.register_button_img{background:url(pink/register.jpg) top center no-repeat; width:87px; height:17px}
+
+.right h3 {margin:0; padding:7px 0; text-align:center; font-family:Arial,Verdana; font-weight:bold; font-size:17px; color:#666; border-bottom:1px solid #CCCCCC;}
+
+.subnav{padding:5px 10px; background-color:#BBB}
+
+.post_now_box{width:148px; margin:0 auto; font-weight:bold; font-size:15px; font-family:"Trebuchet MS"; text-align:left}

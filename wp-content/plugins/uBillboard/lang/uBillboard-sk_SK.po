@@ -1,0 +1,988 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: uBillboard 3 v3.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-11-15 18:36+0000\n"
+"Last-Translator: admin <zoricak@udesign.sk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Slovak\n"
+"X-Poedit-Country: SLOVAKIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin/billboard-edit.php:24
+#@ uBillboard
+msgid "Edit uBillboard"
+msgstr "Upraviť uBillboard"
+
+#: admin/billboard-edit.php:34
+#: admin/billboard-edit.php:65
+#: admin/billboard-edit.php:77
+#@ uBillboard
+msgid "Click to toggle"
+msgstr "Klikni pre prepnutie"
+
+#: admin/billboard-edit.php:35
+#@ uBillboard
+msgid "Options"
+msgstr "Nastavenia"
+
+#: admin/billboard-edit.php:39
+#: admin/billboard-list.php:83
+#@ uBillboard
+msgid "Preview"
+msgstr "Náhľad"
+
+#: admin/billboard-edit.php:54
+#: admin/billboard-list.php:38
+#: admin/billboard-list.php:89
+#@ uBillboard
+msgid "Delete"
+msgstr "Zmazať"
+
+#: admin/billboard-edit.php:57
+#@ uBillboard
+msgid "Save uBillboard"
+msgstr "Uložiť uBillboard"
+
+#: admin/billboard-edit.php:66
+#@ uBillboard
+msgid "Slide Order"
+msgstr "Poradie Slidov"
+
+#: admin/billboard-edit.php:70
+#: admin/billboard-edit.php:123
+#, php-format
+#@ uBillboard
+msgid "Slide %u"
+msgstr "Slide č. %u"
+
+#: admin/billboard-edit.php:78
+#@ uBillboard
+msgid "Controls"
+msgstr "Ovládanie"
+
+#: admin/billboard-edit.php:83
+#@ uBillboard
+msgid "Controls skin"
+msgstr "Vzhľad ovládania"
+
+#: admin/billboard-edit.php:85
+#@ uBillboard
+msgid "Controls Position"
+msgstr "Poloha ovládania"
+
+#: admin/billboard-edit.php:88
+#: lib/uBillboard.class.php:101
+#@ uBillboard
+msgid "Show Controls"
+msgstr "Zobrazenie ovládania"
+
+#: admin/billboard-edit.php:91
+#: lib/uBillboard.class.php:113
+#@ uBillboard
+msgid "Show Play/Pause"
+msgstr "Zobrazenie Prehrávanie/Pauza"
+
+#: admin/billboard-edit.php:94
+#: lib/uBillboard.class.php:125
+#@ uBillboard
+msgid "Show Paginator"
+msgstr "Zobraziť stránkovanie"
+
+#: admin/billboard-edit.php:97
+#@ uBillboard
+msgid "Thumbnails"
+msgstr "Náhľady"
+
+#: admin/billboard-edit.php:132
+#@ uBillboard
+msgid "Add New Slide"
+msgstr "Pridať nový slide"
+
+#: admin/billboard-general.php:5
+#@ uBillboard
+msgid "uBillboard General Options"
+msgstr "Všeobecné nastavenia"
+
+#: admin/billboard-general.php:6
+#@ uBillboard
+msgid ""
+"These options are site-wide, they relate to specific optimizations applied to uBillboard to make it faster. If you want to edit the code however, you might find\n"
+"\tit better to have them turned off, here you can comfortably do so."
+msgstr "Tieto nastavenia platia pre celý web. Vzťahujú sa na špecifické optimalizácie aplikované na zrýchlenie uBillboardu. Ak však chcete editovať kód, bude lepšie ak ich vypnete. Tu to môžete jednoducho spraviť."
+
+#: admin/billboard-general.php:15
+#@ uBillboard
+msgid "JavaScript Compression"
+msgstr "Kompresia JavaScriptu"
+
+#: admin/billboard-general.php:19
+#@ uBillboard
+msgid "Check if you want to use compressed JS"
+msgstr "Zaškrtnite, ak chcete použiť komprimovaný  JavaScript."
+
+#: admin/billboard-general.php:24
+#@ uBillboard
+msgid "Shortcode Optimization"
+msgstr "Optimalizácia pre shortkody"
+
+#: admin/billboard-general.php:28
+#@ uBillboard
+msgid "Check if you are ABSOLUTELY positive that you are using <em>only</em> shortcodes to display uBillboard and not any of the PHP functions."
+msgstr "Zaškrtnite, iba ak ste si úplne istí, že na stránke používate na zbrazenie uBillboardu len shortkody."
+
+#: admin/billboard-general.php:34
+#@ uBillboard
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+#: admin/billboard-import-export.php:4
+#@ uBillboard
+msgid "Import/Export uBillboards"
+msgstr "Import/Export uBillboardov"
+
+#: admin/billboard-import-export.php:15
+#: admin/billboard-list.php:37
+#: admin/billboard-list.php:86
+#@ uBillboard
+msgid "Export"
+msgstr "Export"
+
+#: admin/billboard-import-export.php:16
+#, php-format
+#@ uBillboard
+msgid "Download your exported uBillboards %1$shere%2$s."
+msgstr "Stiahnite si vyexportované uBillboardy %1$stu%2$s."
+
+#: admin/billboard-import-export.php:21
+#: admin/billboard-import-export.php:29
+#@ uBillboard
+msgid "Import"
+msgstr "Import"
+
+#: admin/billboard-import-export.php:24
+#@ uBillboard
+msgid "Import from uBillboard v2.x.x"
+msgstr "Import z uBillboardu verzie 2.x.x"
+
+#: admin/billboard-import-export.php:26
+#@ uBillboard
+msgid "You have the following v2.x.x uBillboards on this WordPress installation"
+msgstr "Nasledovné uBillboardy verzie 2.x sú prítomné vo vašej inštalácii WordPressu."
+
+#: admin/billboard-import-export.php:31
+#@ uBillboard
+msgid "You do not have any uBillboard v2 billboards present on this WordPress installation"
+msgstr "Vo vašej inštalácii WordPressu nie sú prítomné žiadne uBillboardy verzie 2.x"
+
+#: admin/billboard-import-export.php:35
+#@ uBillboard
+msgid "Import from uBillboard v3 and up"
+msgstr "Importovať uBillboardy verzie 3 a vyššie."
+
+#: admin/billboard-import-export.php:38
+#@ uBillboard
+msgid "Import attachments"
+msgstr "Importovať prílohy"
+
+#: admin/billboard-import-export.php:40
+#@ uBillboard
+msgid "Upload Exported uBillboard"
+msgstr "Nahrať Exportovaný uBillboard"
+
+#: admin/billboard-import-export.php:44
+#@ uBillboard
+msgid "<em>Note:</em> Importer will attempt to download all slide images that are not located on this host."
+msgstr "<em>Poznámka:</em> Importer sa pokúsi stiahnuť všetky obrázky, ktoré nie sú prítomné na tomto serveri."
+
+#: admin/billboard-list.php:26
+#@ uBillboard
+msgid "Add New"
+msgstr "Pridať nový"
+
+#: admin/billboard-list.php:36
+#@ uBillboard
+msgid "Bulk Actions"
+msgstr "Hromadné zmeny"
+
+#: admin/billboard-list.php:40
+#@ uBillboard
+msgid "Apply"
+msgstr "Použiť"
+
+#: admin/billboard-list.php:50
+#: admin/billboard-list.php:59
+#: lib/uBillboard.class.php:7
+#@ uBillboard
+msgid "Billboard Name"
+msgstr "Názov uBillboardu"
+
+#: admin/billboard-list.php:51
+#: admin/billboard-list.php:60
+#@ uBillboard
+msgid "Slides"
+msgstr "Slidy"
+
+#: admin/billboard-list.php:52
+#: admin/billboard-list.php:61
+#@ uBillboard
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/billboard-list.php:80
+#@ uBillboard
+msgid "Edit"
+msgstr "Upraviť"
+
+#: admin/billboard-list.php:106
+#, php-format
+#@ uBillboard
+msgid "There are no uBillboards defined yet. Create your first one %1$shere%2$s!"
+msgstr "Zatiaľ nemáte žiadne uBillboardy, vytvorte svoj prvý %1$stu%2$s!"
+
+#: admin/billboard-preview.php:5
+#: billboard.php:513
+#@ uBillboard
+msgid "uBillboard Preview"
+msgstr "Náhľad uBillboardu"
+
+#: billboard.php:196
+#@ uBillboard
+msgid "Get support"
+msgstr "Podpora"
+
+#: billboard.php:198
+#@ uBillboard
+msgid "Use the contact form towards the bottom of the page"
+msgstr "Použite kontaktný formulár koncom stránky."
+
+#: billboard.php:283
+#@ uBillboard
+msgid "uBillboard Cache folder is not writable!"
+msgstr "Nedá sa zapisovať do adresára Cache"
+
+#: billboard.php:392
+#@ uBillboard
+msgid "Add Billboard"
+msgstr "Pridať Billboard"
+
+#: billboard.php:393
+#@ uBillboard
+msgid "General Options"
+msgstr "Všeobecné nastavenia"
+
+#: billboard.php:394
+#@ uBillboard
+msgid "Import/Export"
+msgstr "Import/Export"
+
+#: billboard.php:423
+#: billboard.php:437
+#: billboard.php:455
+#: billboard.php:471
+#@ uBillboard
+msgid "You do not have sufficient permissions to access this page"
+msgstr "Nemáte dostatočné práva na prístup k tejto stránke"
+
+#: billboard.php:508
+#@ uBillboard
+msgid "Really delete all selected sliders? This is not undoable"
+msgstr "Naozaj zmazať všetky zvolené billboardy? Tento krok sa nedá vrátiť späť."
+
+#: billboard.php:509
+#@ uBillboard
+msgid "Really delete? This is not undoable"
+msgstr "Naozaj zmazať? Tento krok sa nedá vrátiť späť."
+
+#: billboard.php:510
+#@ uBillboard
+msgid "Really delete slide?"
+msgstr "Naozaj zmazať slide?"
+
+#: billboard.php:511
+#@ uBillboard
+msgid "Add an Image"
+msgstr "Pridať obrázok"
+
+#: billboard.php:512
+#, php-format
+#@ uBillboard
+msgid "Slide %s"
+msgstr "Slide %s"
+
+#: billboard.php:514
+#@ uBillboard
+msgid "uBillboard has unsaved changes, do you really want to leave?"
+msgstr "uBillboard má neuložené zmeny, naozaj chcete opustiť túto stránku?"
+
+#: billboard.php:515
+#@ uBillboard
+msgid "You are trying to save an empty uBillboard, please add background Image or Content"
+msgstr "Pokúšate sa uložiť prázdny uBillboard, pridajte prosím bud obrázok na pozadie alebo Obsah."
+
+#: billboard.php:549
+#@ uBillboard
+msgid "Billboard updated successfully"
+msgstr "Billboard bol úspešne upravený."
+
+#: billboard.php:555
+#@ uBillboard
+msgid "Failed to update uBillboard"
+msgstr "Nastala chyba pri úprave Billboardu"
+
+#: billboard.php:597
+#, php-format
+#@ uBillboard
+msgid "Billboard %s does not exist"
+msgstr "Billboard %s neexistuje"
+
+#: billboard.php:601
+#, php-format
+#@ uBillboard
+msgid "Billboard &quot;%s&quot; has been successfully deleted"
+msgstr "Billboard &quot;%s&quot; bol úspešne zmazaný"
+
+#: billboard.php:692
+#, php-format
+#@ uBillboard
+msgid "Billboard named &quot;%s&quot; does not exist"
+msgstr "Billboard &quot;%s&quot; neexistuje"
+
+#: billboard.php:698
+#: billboard.php:704
+#@ uBillboard
+msgid "Billboard is invalid"
+msgstr "Billboard je neplatný"
+
+#: lib/embed.php:36
+#@ uBillboard
+msgid "Service not supported"
+msgstr "Služba nepodporovaná"
+
+#: lib/embed.php:43
+#@ uBillboard
+msgid "cURL not installed"
+msgstr "Nemáte nainštalované cURL"
+
+#: lib/embed.php:60
+#@ uBillboard
+msgid "There was an error when loading the video"
+msgstr "Pri načítaní videa došlo k chybe"
+
+#: lib/importexport.php:23
+#@ uBillboard
+msgid "Import file is empty"
+msgstr "Importovaný súbor je prázdny"
+
+#: lib/importexport.php:31
+#, php-format
+#@ uBillboard
+msgid "An error has occurred during XML Parsing: %s"
+msgstr "Nastala chyba pri parsovaní XML: %s"
+
+#: lib/importexport.php:44
+#@ uBillboard
+msgid "Import file is corrupted"
+msgstr "Importovaný súbor je poškodený"
+
+#: lib/importexport.php:81
+#, php-format
+#@ uBillboard
+msgid "Failed to save image to %s"
+msgstr "Zlyhalo ukladanie obrázka do %s"
+
+#: lib/importexport.php:85
+#@ uBillboard
+msgid "Uploads dir is not writable"
+msgstr "Do adresára Uploads sa nedá zapisovať"
+
+#: lib/importexport.php:89
+#@ uBillboard
+msgid "Failed to download image"
+msgstr "Zlyhalo sťahovanie obrázka"
+
+#: lib/importexport.php:180
+#@ uBillboard
+msgid "Billboards imported successfully"
+msgstr "Billboardy boli úspešne importované"
+
+#: lib/uBillboard.class.php:9
+#@ uBillboard
+msgid "Enter a name for this Billboard. You will use this name to create the Billboard on your site."
+msgstr "Vložte názov pre tento Billboard. Tento názov použijete pri zobrazení uBillboardu na vašej stránke."
+
+#: lib/uBillboard.class.php:14
+#@ uBillboard
+msgid "Width"
+msgstr "Šírka"
+
+#: lib/uBillboard.class.php:16
+#@ uBillboard
+msgid "Billboard Width in pixels"
+msgstr "Šírka uBillboardu v pixeloch"
+
+#: lib/uBillboard.class.php:21
+#@ uBillboard
+msgid "Height"
+msgstr "Výška"
+
+#: lib/uBillboard.class.php:23
+#@ uBillboard
+msgid "Billboard Height in pixels"
+msgstr "Výška Billboardu v pixeloch"
+
+#: lib/uBillboard.class.php:28
+#@ uBillboard
+msgid "Autoplay"
+msgstr "Automatické prehrávanie"
+
+#: lib/uBillboard.class.php:30
+#@ uBillboard
+msgid "Automatically start playing slides, makes sense to turn this off only if Show Controls is enabled."
+msgstr "Automaticky začať prehrávať slidy, toto nastavenie má zmysel vypnúť, iba ak je Zobrazenie ovládania zapnuté."
+
+#: lib/uBillboard.class.php:35
+#@ uBillboard
+msgid "Pause on video"
+msgstr "Pauza pre video"
+
+#: lib/uBillboard.class.php:37
+#@ uBillboard
+msgid "Pause playback if slide with embedded video is encountered."
+msgstr "Pozastaviť prehrávanie na slidoch s videom"
+
+#: lib/uBillboard.class.php:42
+#@ uBillboard
+msgid "Shuffle Slides"
+msgstr "Zamiešať slidy"
+
+#: lib/uBillboard.class.php:44
+#@ uBillboard
+msgid "Shuffle slides each time the slider is loaded"
+msgstr "Zamiešať slidy zakaždým keď sa slider načíta."
+
+#: lib/uBillboard.class.php:49
+#@ uBillboard
+msgid "Square Size"
+msgstr "Veľkosť štvorca"
+
+#: lib/uBillboard.class.php:51
+#@ uBillboard
+msgid "Square dimension, applies only to transitions based on squares"
+msgstr "Rozmer štvorca, používa sa pri prechodoch založených na animácii štvorcov."
+
+#: lib/uBillboard.class.php:56
+#@ uBillboard
+msgid "Style"
+msgstr "Vzhľad"
+
+#: lib/uBillboard.class.php:60
+#: lib/uBillboardSlide.class.php:783
+#@ uBillboard
+msgid "Dark"
+msgstr "Tmavý"
+
+#: lib/uBillboard.class.php:61
+#: lib/uBillboardSlide.class.php:784
+#@ uBillboard
+msgid "Bright"
+msgstr "Svetlý"
+
+#: lib/uBillboard.class.php:67
+#@ uBillboard
+msgid "Show Timer"
+msgstr "Zobraziť časovač"
+
+#: lib/uBillboard.class.php:69
+#@ uBillboard
+msgid "Shows countdown until the next slide transition when playing"
+msgstr "Zobrazuje odpočet do najbližšieho prechodu pri prehrávaní"
+
+#: lib/uBillboard.class.php:74
+#@ uBillboard
+msgid "Skin"
+msgstr "Vzhľad"
+
+#: lib/uBillboard.class.php:76
+#@ uBillboard
+msgid "How the controls should look"
+msgstr "Ako by malo vyzerať ovládanie"
+
+#: lib/uBillboard.class.php:78
+#@ uBillboard
+msgid "Minimal Style Controls"
+msgstr "Minimálne"
+
+#: lib/uBillboard.class.php:79
+#@ uBillboard
+msgid "Old School uBillboard"
+msgstr "Old School uBillboard"
+
+#: lib/uBillboard.class.php:80
+#@ uBillboard
+msgid "Bright Old School uBillboard"
+msgstr "Svetlý Old School uBillboard"
+
+#: lib/uBillboard.class.php:81
+#@ uBillboard
+msgid "uTube"
+msgstr "uTube"
+
+#: lib/uBillboard.class.php:82
+#@ uBillboard
+msgid "Silver"
+msgstr "Striebro"
+
+#: lib/uBillboard.class.php:83
+#@ uBillboard
+msgid "Modern"
+msgstr "Moderný"
+
+#: lib/uBillboard.class.php:84
+#@ uBillboard
+msgid "uBillboard v2"
+msgstr "uBillboard v2"
+
+#: lib/uBillboard.class.php:90
+#@ uBillboard
+msgid "Position"
+msgstr "Pozícia"
+
+#: lib/uBillboard.class.php:94
+#: lib/uBillboard.class.php:162
+#@ uBillboard
+msgid "Inside"
+msgstr "Vnútri"
+
+#: lib/uBillboard.class.php:95
+#@ uBillboard
+msgid "Outside"
+msgstr "Vonku"
+
+#: lib/uBillboard.class.php:103
+#@ uBillboard
+msgid "Controls enable you to switch between slides"
+msgstr "Ovládanie vám umožní prepínať medzi slidami"
+
+#: lib/uBillboard.class.php:105
+#@ uBillboard
+msgid "Don't show controls"
+msgstr "Nezobrazovať ovládanie"
+
+#: lib/uBillboard.class.php:106
+#: lib/uBillboard.class.php:118
+#: lib/uBillboard.class.php:130
+#: lib/uBillboard.class.php:142
+#@ uBillboard
+msgid "Show on Mouse Hover"
+msgstr "Zobraziť pri prechode myšou"
+
+#: lib/uBillboard.class.php:107
+#: lib/uBillboard.class.php:119
+#: lib/uBillboard.class.php:131
+#: lib/uBillboard.class.php:143
+#@ uBillboard
+msgid "Show at all times"
+msgstr "Zobraziť stále"
+
+#: lib/uBillboard.class.php:115
+#@ uBillboard
+msgid "Display show pause button"
+msgstr "Zobraziť tlačítko Prehrávanie/Pauza"
+
+#: lib/uBillboard.class.php:117
+#@ uBillboard
+msgid "Don\\'t show Play/Pause"
+msgstr "Nezobrazovať Prehrávanie/Pauza"
+
+#: lib/uBillboard.class.php:127
+#@ uBillboard
+msgid "Display pagination control"
+msgstr "Zobraziť obládanie stránkovania"
+
+#: lib/uBillboard.class.php:129
+#@ uBillboard
+msgid "Don't show Paginator"
+msgstr "Nezobrazovať stránkovanie"
+
+#: lib/uBillboard.class.php:137
+#@ uBillboard
+msgid "Show Thumbnails"
+msgstr "Zobraziť náhľady"
+
+#: lib/uBillboard.class.php:139
+#@ uBillboard
+msgid "Small preview images for all slides"
+msgstr "Malé náhľady pre všetky slidy"
+
+#: lib/uBillboard.class.php:141
+#@ uBillboard
+msgid "Don't show Thumbnails"
+msgstr "Nezobrazovať Náhľady"
+
+#: lib/uBillboard.class.php:149
+#@ uBillboard
+msgid "Thumbnail Position"
+msgstr "Poloha náhľadov"
+
+#: lib/uBillboard.class.php:151
+#: lib/uBillboard.class.php:164
+#@ uBillboard
+msgid "Where do you want thumbs to show"
+msgstr "Kde chcete aby sa nýhľady zobrazovali"
+
+#: lib/uBillboard.class.php:153
+#@ uBillboard
+msgid "Top"
+msgstr "Hore"
+
+#: lib/uBillboard.class.php:154
+#@ uBillboard
+msgid "Bottom"
+msgstr "Dole"
+
+#: lib/uBillboard.class.php:155
+#@ uBillboard
+msgid "Right"
+msgstr "Vpravo"
+
+#: lib/uBillboard.class.php:156
+#@ uBillboard
+msgid "Left"
+msgstr "Vľavo"
+
+#: lib/uBillboard.class.php:169
+#@ uBillboard
+msgid "Thumbnail Width"
+msgstr "Šírka náhľadu"
+
+#: lib/uBillboard.class.php:171
+#@ uBillboard
+msgid "Width of the thumbnail images"
+msgstr "Šírka obrázka s náhľadom"
+
+#: lib/uBillboard.class.php:176
+#@ uBillboard
+msgid "Thumbnail Height"
+msgstr "Výška náhľadu"
+
+#: lib/uBillboard.class.php:178
+#@ uBillboard
+msgid "Height of the thumbnail images"
+msgstr "Výška obrázku s náhľadom"
+
+#: lib/uBillboard.class.php:184
+#@ uBillboard
+msgid "Thumbnail border hover color"
+msgstr "Farba okraja náhľadu pri prechode myšou"
+
+#: lib/uBillboard.class.php:185
+#@ uBillboard
+msgid "Border color of thumbnail on mouse over"
+msgstr "Farba okraja náhľadu pri prechode myšou"
+
+#: lib/uBillboard.class.php:677
+#: lib/uBillboard.class.php:694
+#: lib/uBillboard.class.php:711
+#: lib/uBillboard.class.php:728
+#: lib/uBillboard.class.php:750
+#: lib/uBillboard.class.php:766
+#: lib/uBillboard.class.php:784
+#@ uBillboard
+msgid "Play"
+msgstr "Hraj"
+
+#: lib/uBillboard.class.php:678
+#: lib/uBillboard.class.php:695
+#: lib/uBillboard.class.php:712
+#: lib/uBillboard.class.php:729
+#: lib/uBillboard.class.php:746
+#: lib/uBillboard.class.php:765
+#: lib/uBillboard.class.php:783
+#@ uBillboard
+msgid "Prev"
+msgstr "Predchádzajúci"
+
+#: lib/uBillboard.class.php:679
+#: lib/uBillboard.class.php:696
+#: lib/uBillboard.class.php:713
+#: lib/uBillboard.class.php:730
+#: lib/uBillboard.class.php:747
+#: lib/uBillboard.class.php:767
+#: lib/uBillboard.class.php:785
+#@ uBillboard
+msgid "Next"
+msgstr "Nasledujúci"
+
+#: lib/uBillboardSlide.class.php:7
+#@ uBillboard
+msgid "Image"
+msgstr "Obrázok"
+
+#: lib/uBillboardSlide.class.php:12
+#@ uBillboard
+msgid "Apply Automatic resizing"
+msgstr "Použiť Automatické menenie veľkosti"
+
+#: lib/uBillboardSlide.class.php:17
+#@ uBillboard
+msgid "Use Relative Paths"
+msgstr "Použiť relatívne cesty"
+
+#: lib/uBillboardSlide.class.php:22
+#@ uBillboard
+msgid "Background Color"
+msgstr "Farba Pozadia"
+
+#: lib/uBillboardSlide.class.php:27
+#@ uBillboard
+msgid "Transparent Background"
+msgstr "Priesvitné pozadie"
+
+#: lib/uBillboardSlide.class.php:32
+#@ uBillboard
+msgid "Tile background image"
+msgstr "Opakovať obrázok na pozadí"
+
+#: lib/uBillboardSlide.class.php:37
+#@ uBillboard
+msgid "Link URL"
+msgstr "URL Odkazu"
+
+#: lib/uBillboardSlide.class.php:42
+#@ uBillboard
+msgid "Open in a new window"
+msgstr "Otvoriť v novom okne"
+
+#: lib/uBillboardSlide.class.php:47
+#@ uBillboard
+msgid "Stop animation on this slide"
+msgstr "Zastaviť prehrávanie na tomto slide"
+
+#: lib/uBillboardSlide.class.php:52
+#@ uBillboard
+msgid "Delay"
+msgstr "Spozdenie"
+
+#: lib/uBillboardSlide.class.php:65
+#: lib/uBillboardSlide.class.php:452
+#@ uBillboard
+msgid "Transition"
+msgstr "Prechod"
+
+#: lib/uBillboardSlide.class.php:67
+#@ uBillboard
+msgid "Random"
+msgstr "Náhodný"
+
+#: lib/uBillboardSlide.class.php:68
+#@ uBillboard
+msgid "Fade"
+msgstr "Stmievanie"
+
+#: lib/uBillboardSlide.class.php:69
+#@ uBillboard
+msgid "Crossfade"
+msgstr "Kros-stmievanie"
+
+#: lib/uBillboardSlide.class.php:70
+#@ uBillboard
+msgid "Slide"
+msgstr "Posun"
+
+#: lib/uBillboardSlide.class.php:71
+#@ uBillboard
+msgid "Scale"
+msgstr "Veľkosť"
+
+#: lib/uBillboardSlide.class.php:77
+#@ uBillboard
+msgid "Transition Direction"
+msgstr "Smer prechodu"
+
+#: lib/uBillboardSlide.class.php:80
+#@ uBillboard
+msgid "Random Direction"
+msgstr "Náhodný smer"
+
+#: lib/uBillboardSlide.class.php:81
+#@ uBillboard
+msgid "From Center"
+msgstr "Zo stredu"
+
+#: lib/uBillboardSlide.class.php:82
+#@ uBillboard
+msgid "From Left"
+msgstr "Zľava"
+
+#: lib/uBillboardSlide.class.php:83
+#@ uBillboard
+msgid "From Right"
+msgstr "Sprava"
+
+#: lib/uBillboardSlide.class.php:84
+#@ uBillboard
+msgid "From Top"
+msgstr "Zhora"
+
+#: lib/uBillboardSlide.class.php:85
+#@ uBillboard
+msgid "From Bottom"
+msgstr "Zdola"
+
+#: lib/uBillboardSlide.class.php:86
+#@ uBillboard
+msgid "Random Squares"
+msgstr "Náhodné štvorce"
+
+#: lib/uBillboardSlide.class.php:87
+#@ uBillboard
+msgid "Spiral in"
+msgstr "Špirála dovnútra"
+
+#: lib/uBillboardSlide.class.php:88
+#@ uBillboard
+msgid "Spiral Out"
+msgstr "Špirála von"
+
+#: lib/uBillboardSlide.class.php:89
+#@ uBillboard
+msgid "Chessboard"
+msgstr "Šachovnica"
+
+#: lib/uBillboardSlide.class.php:90
+#@ uBillboard
+msgid "Zig-zag Horizontal"
+msgstr "Cik-cak horizontálne"
+
+#: lib/uBillboardSlide.class.php:91
+#@ uBillboard
+msgid "Zig-zag Vertical"
+msgstr "Cik-cak vertikálne"
+
+#: lib/uBillboardSlide.class.php:97
+#@ uBillboard
+msgid "Content Type"
+msgstr "Typ obsahu"
+
+#: lib/uBillboardSlide.class.php:99
+#@ uBillboard
+msgid "No Content"
+msgstr "Žiaden obsah"
+
+#: lib/uBillboardSlide.class.php:100
+#: lib/uBillboardSlide.class.php:774
+#@ uBillboard
+msgid "Content Editor"
+msgstr "Editor obsahu"
+
+#: lib/uBillboardSlide.class.php:101
+#@ uBillboard
+msgid "Embedded Content"
+msgstr "Vložený obsah"
+
+#: lib/uBillboardSlide.class.php:102
+#@ uBillboard
+msgid "Blog-based Dynamic Content"
+msgstr "Dynamický obsah založený na blogu"
+
+#: lib/uBillboardSlide.class.php:108
+#@ uBillboard
+msgid "Text"
+msgstr "Text"
+
+#: lib/uBillboardSlide.class.php:112
+#@ uBillboard
+msgid "Text Evaluation"
+msgstr "Vyhodnocovanie Textu"
+
+#: lib/uBillboardSlide.class.php:114
+#@ uBillboard
+msgid "Textile"
+msgstr "Textile"
+
+#: lib/uBillboardSlide.class.php:115
+#@ uBillboard
+msgid "HTML"
+msgstr "HTML"
+
+#: lib/uBillboardSlide.class.php:121
+#@ uBillboard
+msgid "URL of the Embedded Content"
+msgstr "URL vloženého obsahu"
+
+#: lib/uBillboardSlide.class.php:125
+#@ uBillboard
+msgid "Blog post offset"
+msgstr "Posunutie blogu"
+
+#: lib/uBillboardSlide.class.php:143
+#@ uBillboard
+msgid "Post category"
+msgstr "Kategória postov"
+
+#: lib/uBillboardSlide.class.php:449
+#@ uBillboard
+msgid "Background"
+msgstr "Pozadie"
+
+#: lib/uBillboardSlide.class.php:450
+#@ uBillboard
+msgid "Content"
+msgstr "Obsah"
+
+#: lib/uBillboardSlide.class.php:451
+#@ uBillboard
+msgid "Link"
+msgstr "Odkaz"
+
+#: lib/uBillboardSlide.class.php:563
+#@ uBillboard
+msgid "URL Must not be empty"
+msgstr "URL nesmie byť prázdne"
+
+#: lib/uBillboardSlide.class.php:596
+#@ uBillboard
+msgid "Read More"
+msgstr "Viac"
+
+#: lib/uBillboardSlide.class.php:776
+#@ uBillboard
+msgid "Add new box"
+msgstr "Pridať nový box"
+
+#: lib/uBillboardSlide.class.php:777
+#@ uBillboard
+msgid "Remove currently focused box"
+msgstr "Zmazať aktuálne vybratý box"
+
+#: lib/uBillboardSlide.class.php:781
+#@ uBillboard
+msgid "Inherit"
+msgstr "Zdediť"
+
+#: lib/uBillboardSlide.class.php:782
+#@ uBillboard
+msgid "Transparent"
+msgstr "Priesvitný"
+
+#: lib/uBillboardSlide.class.php:786
+#@ uBillboard
+msgid "Help"
+msgstr "Pomoc"
+
+#: lib/uBillboardSlide.class.php:840
+#@ uBillboard
+msgid "Image URL"
+msgstr "URL Obrázka"
+

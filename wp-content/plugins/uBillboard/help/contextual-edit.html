@@ -1,0 +1,169 @@
+<h3>Add/Edit a uBillboard</h3>
+<p>Here you can create new, or edit existing uBillboards. We will go through the options on this page:</p>
+<h4>uBillboard Options</h4>
+<dl>
+	<dt>Title</dt>
+	<dd>Allows you to assing a name for your uBillboard, in case you have multiple. It is recommended to use the default name though.</dd>
+	
+	<dt>Options - Preview</dt>
+	<dd>Allows you to preview the billboard. Will save your changes into a temporary billboard, so you need to make sure you save your
+	changes using the "Save uBillboard" button. This preview also does not necessarily have to look exactly the same as in the frontend.
+	This is because Preview does not load your theme's CSS, and therefore it will not reflect on this previewed uBillboard.</dd>
+	
+	<dt>Options - Width</dt>
+	<dd>Specifies uBillboard width in pixels. This width represents the width of the actual stage area, where all the slides are. If you have
+	either thumbnails or controls set to "outside", the actual total space taken by uBillboard will be more. If "Apply Automatic Resizing"
+	is enabled, images will be resized to fit this width.</dd>
+	
+	<dt>Options - Height</dt>
+	<dd>Specifies uBillboard height in pixels, generally the same rules apply as to Width.</dd>
+	
+	<dt>Options - Shuffle Slides</dt>
+	<dd>Will randomize the order in which slides appear on each page load.</dd>
+	
+	<dt>Options - Autoplay</dt>
+	<dd>Will automatically start playing once all slides have been loaded.</dd>
+	
+	<dt>Options - Square Size</dt>
+	<dd>Some of the animations are based around relatively small squares that are animated separately to achieve beautiful transition.
+	You can control the dimension (in pixels) of these squares using this option. Please note: The smaller the dimension, the smaller the squares.
+	The smaller the squares, the more of them are needed to fill the uBillboard space. Too many squares can cause performance issues,
+	general rule of thumb with this option is to keep it on a value that, given your uBillboard Width and Height will generate 50 - 100
+	squares. [50 &gt; (width / square size) * (height / square size) &gt; 100]</dd>
+	
+	<dt>Options - Style</dt>
+	<dd>Optional, it is the default style for your content boxes with slide descriptions if you have any. These can be then overriden
+	with the per-description box options in the Content Editor</dd>
+	
+	<dt>Options - Delete</dt>
+	<dd>Deletes this uBillboard. Not undoable.</dd>
+	
+	<dt>Options - Save uBillboard</dt>
+	<dd>Saves uBillboard overwriting any uBillboards with the same name.</dd>
+</dl>
+
+<h4>Slide Order</h4>
+<dl>
+	<dt>Slide Order</dt>
+	<dd>Each box represents a slide. Drag them around, when you drop, slides on the left will be automatically moved/renamed. You still
+	need to save uBillboard for the changes to take effect on the frontend.</dd>
+</dl>
+
+<h4>Controls</h4>
+<dl>
+	<dt>Show Timer</dt>
+	<dd>Will show a countdown circle in the top right corner of the slide that will show the time remaining before the next slide is
+	shown. This will not appear if you don't have Autoplay enabled or don't press Play. This feature is not supported on browsers 
+	that don't support Canvas - that is the IE.</dd>
+	
+	<dt>Controls Skin</dt>
+	<dd>Allows you to choose the skin you want to use with your uBillboard instance. There is a variety of skins with different
+	controls layouts and behaviors as well as look &amp; feel</dd>
+	
+	<dt>Controls Position</dt>
+	<dd>Controls can be positioned either inside of the uBillboard bounds defined by Width and Height options, or outside. Generally
+	where exactly are they positioned is controlled by the Controls Skin, but you can decide if you want them covering your content.
+	The controls position is useful when your controls overlap with Thumbnails. In that case you can position either the controls,
+	or thumbnails outside or inside so that the two don't overlap.</dd>
+	
+	<dt>Show Controls</dt>
+	<dd>This option controls the display of Next/Prev buttons. You can either show them at all times, on mouse hover over uBillboard,
+	or never.</dd>
+	
+	<dt>Show Play/Pause</dt>
+	<dd>Similar to "Show Controls", but controls the Play/Pause button.</dd>
+	
+	<dt>Show Paginator</dt>
+	<dd>Similar to "Show Controls" and "Show Play/Pause", but controls the paginator. Paginator is most of the time displayed as
+	bullets that each represent the corresponding slide, but in some skins in can take other forms.</dd>
+	
+	<dt>Show Thumbnails</dt>
+	<dd>Similar to "Show Controls" etc. Thumbnails are small images that represent the content of the slide they point to. When
+	you click a thumbnail, you will be taken to the corresponding slide.</dd>
+	
+	<dt>Thumbnails Position</dt>
+	<dd>Thumbnails can be positioned on all four edges of uBillboard.</dd>
+	
+	<dt>Thumbnails Inside</dt>
+	<dd>Similar to Controls Position, thumbnails can be positioned inside or outside.</dd>
+	
+	<dt>Thumbnail Width</dt>
+	<dd>Width if the thumbnail image in pixels</dd>
+	
+	<dt>Thumbnail Height</dt>
+	<dd>Height if the thumbnail image in pixels</dd>
+	
+	<dt>Thumbnail Hover Color</dt>
+	<dd>The border color of each thumbnail</dd>
+</dl>
+
+<h4>Slide Options</h4>
+<dl>
+	<dt>Background Image URL</dt>
+	<dd>The main field. You should almost always have an image for your slide. You can select from all images in your Media Library.
+	A preview will be displayed on the left hand side of the slide edit box.</dd>
+	
+	<dt>Apply Automatic Resizing</dt>
+	<dd>Uses <a href="http://code.google.com/p/timthumb/">TimThumb</a> to automatically resize your image to the dimensions of 
+	uBillboard. This feature can be problematic on some servers, if it does not work for you, see the link above, make sure your
+	cache folder is writable, and if all else fails feel free to contact us.</dd>
+	
+	<dt>Use Relative Paths</dt>
+	<dd>Will call TimThumb using a relative path to the image specified above instead of an absolute path. On some servers it helps 
+	to turn this off. In particular, we've had that experience on a Windows server. But it should only be necessary if TimThumb isn't
+	working for you.</dd>
+	
+	<dt>Background Color</dt>
+	<dd>Fallback background color for the slide, in case you have transparent images or videos in your slide.</dd>
+	
+	<dt>Transparent Background</dt>
+	<dd>Related to the above, but since you can not use color picker to select a transparent color, we have this checkbox.</dd>
+	
+	<dt>Content Type</dt>
+	<dd>Allows you to add additional content overlay on top of your slide. You can select:
+		<ul>
+			<li>No Content - just the image</li>
+			<li>Content Editor - Special feature that allows you to add text to your slide, discussed below</li>
+			<li>Embedded Content - allows you to embed YouTube or Vimeo video</li>
+			<li>Blog-based Dynamic Content - allows you to link your slide to the Blog</li>
+		</ul>
+	</dd>
+	
+	<dt>No Content</dt>
+	<dd>Only the image will be displayed.</dd>
+	
+	<dt>Content Editor</dt>
+	<dd>Content editor allows you to visually position multiple boxes with content (<a href="http://en.wikipedia.org/wiki/Textile_(markup_language)">
+	Textile</a> or plain HTML) on top of your slide.</dd>
+	
+	<dt>Text Evaluation</dt>
+	<dd>Decides how will the content of the boxes in the Content Editor be treated.</dd>
+	
+	<dt>Embedded Content</dt>
+	<dd>Specify the URL of the content you want to embed and we'll take care of the rest.</dd>
+	
+	<dt>Blog-based Content</dt>
+	<dd>Will pull content from the Blog. Content will be displayed on top of the slide, if Featured image is available, it will be used
+	instead of the image specified in "Background Image".</dd>
+	
+	<dt>Blog Offset</dt>
+	<dd>Blog entries are sorted from the most recent to the least recent. Offset specifies which article to use. Offset of 0 means
+	that the most recent article will be used. Offset of 1 means that the second most recent aricle will be used.</dd>
+	
+	<dt>Link URL</dt>
+	<dd>The whole uBillboard can be wired to open a specific link. If you specify a link here, it will be used when this slide
+	is currently being shown and the user clicks on an area of uBillboard that does not trigger another functionality (like
+	go to Next page or similar).</dd>
+	
+	<dt>Transition Delay:</dt>
+	<dd>If Autoplay is active or the user has started the playback manually, this value will determine how much time will pass before
+	the next slide is animated in.</dd>
+	
+	<dt>Transition:</dt>
+	<dd>Allows you to select an effect that will be applied when switching from the next slide</dd>
+	
+	<dt>Transition Direction:</dt>
+	<dd>The mode of application of the transition effect. The combination of these two settings determines how will the transition look.
+	There are some combinations that don't make sense and therefore are not implemented. These will fall back to a default transition
+	direction for the selected transition.</dd>
+</dl>

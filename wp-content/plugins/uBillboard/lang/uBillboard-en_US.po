@@ -1,0 +1,990 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin/billboard-edit.php:24
+#@ uBillboard
+msgid "Edit uBillboard"
+msgstr "Edit uBillboard"
+
+#: admin/billboard-edit.php:34
+#: admin/billboard-edit.php:65
+#: admin/billboard-edit.php:77
+#@ uBillboard
+msgid "Click to toggle"
+msgstr "Click to toggle"
+
+#: admin/billboard-edit.php:35
+#@ uBillboard
+msgid "Options"
+msgstr "Options"
+
+#: admin/billboard-edit.php:39
+#: admin/billboard-list.php:83
+#@ uBillboard
+msgid "Preview"
+msgstr "Preview"
+
+#: admin/billboard-edit.php:54
+#: admin/billboard-list.php:38
+#: admin/billboard-list.php:89
+#@ uBillboard
+msgid "Delete"
+msgstr "Delete"
+
+#: admin/billboard-edit.php:57
+#@ uBillboard
+msgid "Save uBillboard"
+msgstr "Save uBillboard"
+
+#: admin/billboard-edit.php:66
+#@ uBillboard
+msgid "Slide Order"
+msgstr "Slide Order"
+
+#: lib/uBillboardSlide.class.php:70
+#@ uBillboard
+msgid "Slide"
+msgstr "Slide"
+
+#: admin/billboard-edit.php:78
+#@ uBillboard
+msgid "Controls"
+msgstr "Controls"
+
+#: admin/billboard-edit.php:83
+#@ uBillboard
+msgid "Controls skin"
+msgstr "Controls skin"
+
+#: admin/billboard-edit.php:88
+#: lib/uBillboard.class.php:101
+#@ uBillboard
+msgid "Show Controls"
+msgstr "Show Controls"
+
+#: admin/billboard-edit.php:85
+#@ uBillboard
+msgid "Controls Position"
+msgstr "Controls Position"
+
+#: admin/billboard-edit.php:91
+#: lib/uBillboard.class.php:113
+#@ uBillboard
+msgid "Show Play/Pause"
+msgstr "Show Play/Pause"
+
+#: admin/billboard-edit.php:94
+#: lib/uBillboard.class.php:125
+#@ uBillboard
+msgid "Show Paginator"
+msgstr "Show Paginator"
+
+#: admin/billboard-edit.php:97
+#@ uBillboard
+msgid "Thumbnails"
+msgstr "Thumbnails"
+
+#: admin/billboard-edit.php:70
+#: admin/billboard-edit.php:123
+#, php-format
+#@ uBillboard
+msgid "Slide %u"
+msgstr "Slide %u"
+
+#: admin/billboard-general.php:5
+#@ uBillboard
+msgid "uBillboard General Options"
+msgstr "uBillboard General Options"
+
+#: admin/billboard-general.php:6
+#@ uBillboard
+msgid ""
+"These options are site-wide, they relate to specific optimizations applied to uBillboard to make it faster. If you want to edit the code however, you might find\n"
+"\tit better to have them turned off, here you can comfortably do so."
+msgstr ""
+"These options are site-wide, they relate to specific optimizations applied to uBillboard to make it faster. If you want to edit the code however, you might find\n"
+"\\\tit better to have them turned off, here you can comfortably do so."
+
+#: admin/billboard-general.php:15
+#@ uBillboard
+msgid "JavaScript Compression"
+msgstr "JavaScript Compression"
+
+#: admin/billboard-general.php:19
+#@ uBillboard
+msgid "Check if you want to use compressed JS"
+msgstr "Check if you want to use compressed JS"
+
+#: admin/billboard-general.php:24
+#@ uBillboard
+msgid "Shortcode Optimization"
+msgstr "Shortcode Optimization"
+
+#: admin/billboard-general.php:28
+#@ uBillboard
+msgid "Check if you are ABSOLUTELY positive that you are using <em>only</em> shortcodes to display uBillboard and not any of the PHP functions."
+msgstr "Check if you are ABSOLUTELY positive that you are using <em>only</em> shortcodes to display uBillboard and not any of the PHP functions."
+
+#: admin/billboard-general.php:34
+#@ uBillboard
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: admin/billboard-import-export.php:4
+#@ uBillboard
+msgid "Import/Export uBillboards"
+msgstr "Import/Export uBillboards"
+
+#: admin/billboard-import-export.php:15
+#: admin/billboard-list.php:37
+#: admin/billboard-list.php:86
+#@ uBillboard
+msgid "Export"
+msgstr "Export"
+
+#: admin/billboard-import-export.php:16
+#, php-format
+#@ uBillboard
+msgid "Download your exported uBillboards %1$shere%2$s."
+msgstr "Download your exported uBillboards %1$shere%2$s."
+
+#: admin/billboard-import-export.php:21
+#: admin/billboard-import-export.php:29
+#@ uBillboard
+msgid "Import"
+msgstr "Import"
+
+#: admin/billboard-import-export.php:38
+#@ uBillboard
+msgid "Import attachments"
+msgstr "Import attachments"
+
+#: admin/billboard-import-export.php:40
+#@ uBillboard
+msgid "Upload Exported uBillboard"
+msgstr "Upload Exported uBillboard"
+
+#: admin/billboard-import-export.php:44
+#@ uBillboard
+msgid "<em>Note:</em> Importer will attempt to download all slide images that are not located on this host."
+msgstr "<em>Note:</em> Importer will attempt to download all slide images that are not located on this host."
+
+#: admin/billboard-list.php:36
+#@ uBillboard
+msgid "Bulk Actions"
+msgstr "Bulk Actions"
+
+#: admin/billboard-list.php:80
+#@ uBillboard
+msgid "Edit"
+msgstr "Edit"
+
+#: admin/billboard-list.php:50
+#: admin/billboard-list.php:59
+#: lib/uBillboard.class.php:7
+#@ uBillboard
+msgid "Billboard Name"
+msgstr "Billboard Name"
+
+#: admin/billboard-list.php:52
+#: admin/billboard-list.php:61
+#@ uBillboard
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/billboard-list.php:106
+#, php-format
+#@ uBillboard
+msgid "There are no uBillboards defined yet. Create your first one %1$shere%2$s!"
+msgstr "There are no uBillboards defined yet. Create your first one %1$shere%2$s!"
+
+#: admin/billboard-preview.php:5
+#: billboard.php:513
+#@ uBillboard
+msgid "uBillboard Preview"
+msgstr "uBillboard Preview"
+
+#: billboard.php:392
+#@ uBillboard
+msgid "Add Billboard"
+msgstr "Add Billboard"
+
+#: billboard.php:393
+#@ uBillboard
+msgid "General Options"
+msgstr "General Options"
+
+#: billboard.php:394
+#@ uBillboard
+msgid "Import/Export"
+msgstr "Import/Export"
+
+#: billboard.php:423
+#: billboard.php:437
+#: billboard.php:455
+#: billboard.php:471
+#@ uBillboard
+msgid "You do not have sufficient permissions to access this page"
+msgstr "You do not have sufficient permissions to access this page"
+
+#: billboard.php:509
+#@ uBillboard
+msgid "Really delete? This is not undoable"
+msgstr "Really delete? This is not undoable"
+
+#: billboard.php:510
+#@ uBillboard
+msgid "Really delete slide?"
+msgstr "Really delete slide?"
+
+#: billboard.php:511
+#@ uBillboard
+msgid "Add an Image"
+msgstr "Add an Image"
+
+#: billboard.php:512
+#, php-format
+#@ uBillboard
+msgid "Slide %s"
+msgstr "Slide %s"
+
+#: lib/importexport.php:23
+#@ uBillboard
+msgid "Import file is empty"
+msgstr "Import file is empty"
+
+#: lib/importexport.php:31
+#, php-format
+#@ uBillboard
+msgid "An error has occurred during XML Parsing: %s"
+msgstr "An error has occurred during XML Parsing: %s"
+
+#: lib/importexport.php:44
+#@ uBillboard
+msgid "Import file is corrupted"
+msgstr "Import file is corrupted"
+
+#: lib/importexport.php:81
+#, php-format
+#@ uBillboard
+msgid "Failed to save image to %s"
+msgstr "Failed to save image to %s"
+
+#: lib/importexport.php:85
+#@ uBillboard
+msgid "Uploads dir is not writable"
+msgstr "Uploads dir is not writable"
+
+#: lib/importexport.php:89
+#@ uBillboard
+msgid "Failed to download image"
+msgstr "Failed to download image"
+
+#: billboard.php:549
+#@ uBillboard
+msgid "Billboard updated successfully"
+msgstr "Billboard updated successfully"
+
+#: billboard.php:597
+#, php-format
+#@ uBillboard
+msgid "Billboard %s does not exist"
+msgstr "Billboard %s does not exist"
+
+#: billboard.php:692
+#, php-format
+#@ uBillboard
+msgid "Billboard named &quot;%s&quot; does not exist"
+msgstr "Billboard named &quot;%s&quot; does not exist"
+
+#: billboard.php:698
+#: billboard.php:704
+#@ uBillboard
+msgid "Billboard is invalid"
+msgstr "Billboard is invalid"
+
+#: lib/uBillboardSlide.class.php:563
+#@ uBillboard
+msgid "URL Must not be empty"
+msgstr "URL Must not be empty"
+
+#: lib/embed.php:60
+#@ uBillboard
+msgid "There was an error when loading the video"
+msgstr "There was an error when loading the video"
+
+#: lib/uBillboard.class.php:9
+#@ uBillboard
+msgid "Enter a name for this Billboard. You will use this name to create the Billboard on your site."
+msgstr "Enter a name for this Billboard. You will use this name to create the Billboard on your site."
+
+#: lib/uBillboard.class.php:14
+#@ uBillboard
+msgid "Width"
+msgstr "Width"
+
+#: lib/uBillboard.class.php:16
+#@ uBillboard
+msgid "Billboard Width in pixels"
+msgstr "Billboard Width in pixels"
+
+#: lib/uBillboard.class.php:21
+#@ uBillboard
+msgid "Height"
+msgstr "Height"
+
+#: lib/uBillboard.class.php:23
+#@ uBillboard
+msgid "Billboard Height in pixels"
+msgstr "Billboard Height in pixels"
+
+#: lib/uBillboard.class.php:28
+#@ uBillboard
+msgid "Autoplay"
+msgstr "Autoplay"
+
+#: lib/uBillboard.class.php:30
+#@ uBillboard
+msgid "Automatically start playing slides, makes sense to turn this off only if Show Controls is enabled."
+msgstr "Automatically start playing slides, makes sense to turn this off only if Show Controls is enabled."
+
+#: lib/uBillboard.class.php:42
+#@ uBillboard
+msgid "Shuffle Slides"
+msgstr "Shuffle Slides"
+
+#: lib/uBillboard.class.php:44
+#@ uBillboard
+msgid "Shuffle slides each time the slider is loaded"
+msgstr "Shuffle slides each time the slider is loaded"
+
+#: lib/uBillboard.class.php:49
+#@ uBillboard
+msgid "Square Size"
+msgstr "Square Size"
+
+#: lib/uBillboard.class.php:51
+#@ uBillboard
+msgid "Square dimension, applies only to transitions based on squares"
+msgstr "Square dimension, applies only to transitions based on squares"
+
+#: lib/uBillboard.class.php:56
+#@ uBillboard
+msgid "Style"
+msgstr "Style"
+
+#: lib/uBillboard.class.php:60
+#: lib/uBillboardSlide.class.php:783
+#@ uBillboard
+msgid "Dark"
+msgstr "Dark"
+
+#: lib/uBillboard.class.php:61
+#: lib/uBillboardSlide.class.php:784
+#@ uBillboard
+msgid "Bright"
+msgstr "Bright"
+
+#: lib/uBillboard.class.php:67
+#@ uBillboard
+msgid "Show Timer"
+msgstr "Show Timer"
+
+#: lib/uBillboard.class.php:69
+#@ uBillboard
+msgid "Shows countdown until the next slide transition when playing"
+msgstr "Shows countdown until the next slide transition when playing"
+
+#: lib/uBillboard.class.php:74
+#@ uBillboard
+msgid "Skin"
+msgstr "Skin"
+
+#: lib/uBillboard.class.php:76
+#@ uBillboard
+msgid "How the controls should look"
+msgstr "How the controls should look"
+
+#: lib/uBillboard.class.php:78
+#@ uBillboard
+msgid "Minimal Style Controls"
+msgstr "Minimal Style Controls"
+
+#: lib/uBillboard.class.php:79
+#@ uBillboard
+msgid "Old School uBillboard"
+msgstr "Old School uBillboard"
+
+#: lib/uBillboard.class.php:80
+#@ uBillboard
+msgid "Bright Old School uBillboard"
+msgstr "Bright Old School uBillboard"
+
+#: lib/uBillboard.class.php:81
+#@ uBillboard
+msgid "uTube"
+msgstr "uTube"
+
+#: lib/uBillboard.class.php:83
+#@ uBillboard
+msgid "Modern"
+msgstr ""
+
+#: lib/uBillboard.class.php:103
+#@ uBillboard
+msgid "Controls enable you to switch between slides"
+msgstr "Controls enable you to switch between slides"
+
+#: lib/uBillboard.class.php:105
+#@ uBillboard
+msgid "Don't show controls"
+msgstr "Don't show controls"
+
+#: lib/uBillboard.class.php:106
+#: lib/uBillboard.class.php:118
+#: lib/uBillboard.class.php:130
+#: lib/uBillboard.class.php:142
+#@ uBillboard
+msgid "Show on Mouse Hover"
+msgstr "Show on Mouse Hover"
+
+#: lib/uBillboard.class.php:107
+#: lib/uBillboard.class.php:119
+#: lib/uBillboard.class.php:131
+#: lib/uBillboard.class.php:143
+#@ uBillboard
+msgid "Show at all times"
+msgstr "Show at all times"
+
+#: lib/uBillboard.class.php:90
+#@ uBillboard
+msgid "Position"
+msgstr "Position"
+
+#: lib/uBillboard.class.php:94
+#: lib/uBillboard.class.php:162
+#@ uBillboard
+msgid "Inside"
+msgstr "Inside"
+
+#: lib/uBillboard.class.php:95
+#@ uBillboard
+msgid "Outside"
+msgstr "Outside"
+
+#: lib/uBillboard.class.php:115
+#@ uBillboard
+msgid "Display show pause button"
+msgstr "Display show pause button"
+
+#: lib/uBillboard.class.php:117
+#@ uBillboard
+msgid "Don\\'t show Play/Pause"
+msgstr "Don\\'t show Play/Pause"
+
+#: lib/uBillboard.class.php:127
+#@ uBillboard
+msgid "Display pagination control"
+msgstr "Display pagination control"
+
+#: lib/uBillboard.class.php:129
+#@ uBillboard
+msgid "Don't show Paginator"
+msgstr "Don't show Paginator"
+
+#: lib/uBillboard.class.php:137
+#@ uBillboard
+msgid "Show Thumbnails"
+msgstr "Show Thumbnails"
+
+#: lib/uBillboard.class.php:139
+#@ uBillboard
+msgid "Small preview images for all slides"
+msgstr "Small preview images for all slides"
+
+#: lib/uBillboard.class.php:141
+#@ uBillboard
+msgid "Don't show Thumbnails"
+msgstr "Don't show Thumbnails"
+
+#: lib/uBillboard.class.php:149
+#@ uBillboard
+msgid "Thumbnail Position"
+msgstr "Thumbnail Position"
+
+#: lib/uBillboard.class.php:151
+#: lib/uBillboard.class.php:164
+#@ uBillboard
+msgid "Where do you want thumbs to show"
+msgstr "Where do you want thumbs to show"
+
+#: lib/uBillboard.class.php:153
+#@ uBillboard
+msgid "Top"
+msgstr "Top"
+
+#: lib/uBillboard.class.php:154
+#@ uBillboard
+msgid "Bottom"
+msgstr "Bottom"
+
+#: lib/uBillboard.class.php:155
+#@ uBillboard
+msgid "Right"
+msgstr "Right"
+
+#: lib/uBillboard.class.php:156
+#@ uBillboard
+msgid "Left"
+msgstr "Left"
+
+#: lib/uBillboard.class.php:169
+#@ uBillboard
+msgid "Thumbnail Width"
+msgstr "Thumbnail Width"
+
+#: lib/uBillboard.class.php:171
+#@ uBillboard
+msgid "Width of the thumbnail images"
+msgstr "Width of the thumbnail images"
+
+#: lib/uBillboard.class.php:176
+#@ uBillboard
+msgid "Thumbnail Height"
+msgstr "Thumbnail Height"
+
+#: lib/uBillboard.class.php:178
+#@ uBillboard
+msgid "Height of the thumbnail images"
+msgstr "Height of the thumbnail images"
+
+#: lib/uBillboard.class.php:677
+#: lib/uBillboard.class.php:694
+#: lib/uBillboard.class.php:711
+#: lib/uBillboard.class.php:728
+#: lib/uBillboard.class.php:750
+#: lib/uBillboard.class.php:766
+#: lib/uBillboard.class.php:784
+#@ uBillboard
+msgid "Play"
+msgstr "Play"
+
+#: lib/uBillboard.class.php:678
+#: lib/uBillboard.class.php:695
+#: lib/uBillboard.class.php:712
+#: lib/uBillboard.class.php:729
+#: lib/uBillboard.class.php:746
+#: lib/uBillboard.class.php:765
+#: lib/uBillboard.class.php:783
+#@ uBillboard
+msgid "Prev"
+msgstr "Prev"
+
+#: lib/uBillboard.class.php:679
+#: lib/uBillboard.class.php:696
+#: lib/uBillboard.class.php:713
+#: lib/uBillboard.class.php:730
+#: lib/uBillboard.class.php:747
+#: lib/uBillboard.class.php:767
+#: lib/uBillboard.class.php:785
+#@ uBillboard
+msgid "Next"
+msgstr "Next"
+
+#: lib/uBillboardSlide.class.php:7
+#@ uBillboard
+msgid "Image"
+msgstr "Image"
+
+#: lib/uBillboardSlide.class.php:12
+#@ uBillboard
+msgid "Apply Automatic resizing"
+msgstr "Apply Automatic resizing"
+
+#: lib/uBillboardSlide.class.php:22
+#@ uBillboard
+msgid "Background Color"
+msgstr "Background Color"
+
+#: lib/uBillboardSlide.class.php:37
+#@ uBillboard
+msgid "Link URL"
+msgstr "Link URL"
+
+#: lib/uBillboardSlide.class.php:52
+#@ uBillboard
+msgid "Delay"
+msgstr "Delay"
+
+#: lib/uBillboardSlide.class.php:65
+#: lib/uBillboardSlide.class.php:452
+#@ uBillboard
+msgid "Transition"
+msgstr "Transition"
+
+#: lib/uBillboardSlide.class.php:67
+#@ uBillboard
+msgid "Random"
+msgstr "Random"
+
+#: lib/uBillboardSlide.class.php:68
+#@ uBillboard
+msgid "Fade"
+msgstr "Fade"
+
+#: lib/uBillboardSlide.class.php:71
+#@ uBillboard
+msgid "Scale"
+msgstr "Scale"
+
+#: lib/uBillboardSlide.class.php:77
+#@ uBillboard
+msgid "Transition Direction"
+msgstr "Transition Direction"
+
+#: lib/uBillboardSlide.class.php:80
+#@ uBillboard
+msgid "Random Direction"
+msgstr "Random Direction"
+
+#: lib/uBillboardSlide.class.php:81
+#@ uBillboard
+msgid "From Center"
+msgstr "From Center"
+
+#: lib/uBillboardSlide.class.php:82
+#@ uBillboard
+msgid "From Left"
+msgstr "From Left"
+
+#: lib/uBillboardSlide.class.php:83
+#@ uBillboard
+msgid "From Right"
+msgstr "From Right"
+
+#: lib/uBillboardSlide.class.php:84
+#@ uBillboard
+msgid "From Top"
+msgstr "From Top"
+
+#: lib/uBillboardSlide.class.php:85
+#@ uBillboard
+msgid "From Bottom"
+msgstr "From Bottom"
+
+#: lib/uBillboardSlide.class.php:86
+#@ uBillboard
+msgid "Random Squares"
+msgstr "Random Squares"
+
+#: lib/uBillboardSlide.class.php:87
+#@ uBillboard
+msgid "Spiral in"
+msgstr "Spiral in"
+
+#: lib/uBillboardSlide.class.php:88
+#@ uBillboard
+msgid "Spiral Out"
+msgstr "Spiral Out"
+
+#: lib/uBillboardSlide.class.php:108
+#@ uBillboard
+msgid "Text"
+msgstr "Text"
+
+#: lib/uBillboardSlide.class.php:449
+#@ uBillboard
+msgid "Background"
+msgstr "Background"
+
+#: lib/uBillboardSlide.class.php:450
+#@ uBillboard
+msgid "Content"
+msgstr "Content"
+
+#: lib/uBillboardSlide.class.php:451
+#@ uBillboard
+msgid "Link"
+msgstr "Link"
+
+#: admin/billboard-edit.php:132
+#@ uBillboard
+msgid "Add New Slide"
+msgstr "Add New Slide"
+
+#: admin/billboard-import-export.php:24
+#@ uBillboard
+msgid "Import from uBillboard v2.x.x"
+msgstr "Import from uBillboard v2.x.x"
+
+#: admin/billboard-import-export.php:26
+#@ uBillboard
+msgid "You have the following v2.x.x uBillboards on this WordPress installation"
+msgstr "You have the following v2.x.x uBillboards on this WordPress installation"
+
+#: admin/billboard-import-export.php:31
+#@ uBillboard
+msgid "You do not have any uBillboard v2 billboards present on this WordPress installation"
+msgstr "You do not have any uBillboard v2 billboards present on this WordPress installation"
+
+#: admin/billboard-import-export.php:35
+#@ uBillboard
+msgid "Import from uBillboard v3 and up"
+msgstr "Import from uBillboard v3 and up"
+
+#: admin/billboard-list.php:26
+#@ uBillboard
+msgid "Add New"
+msgstr "Add New"
+
+#: billboard.php:196
+#@ uBillboard
+msgid "Get support"
+msgstr "Get support"
+
+#: billboard.php:198
+#@ uBillboard
+msgid "Use the contact form towards the bottom of the page"
+msgstr "Use the contact form towards the bottom of the page"
+
+#: billboard.php:283
+#@ uBillboard
+msgid "uBillboard Cache folder is not writable!"
+msgstr "uBillboard Cache folder is not writable!"
+
+#: billboard.php:514
+#@ uBillboard
+msgid "uBillboard has unsaved changes, do you really want to leave?"
+msgstr "uBillboard has unsaved changes, do you really want to leave?"
+
+#: billboard.php:515
+#@ uBillboard
+msgid "You are trying to save an empty uBillboard, please add background Image or Content"
+msgstr "You are trying to save an empty uBillboard, please add background Image or Content"
+
+#: billboard.php:555
+#@ uBillboard
+msgid "Failed to update uBillboard"
+msgstr "Failed to update uBillboard"
+
+#: billboard.php:601
+#, php-format
+#@ uBillboard
+msgid "Billboard &quot;%s&quot; has been successfully deleted"
+msgstr "Billboard &quot;%s&quot; has been successfully deleted"
+
+#: lib/embed.php:36
+#@ uBillboard
+msgid "Service not supported"
+msgstr "Service not supported"
+
+#: lib/importexport.php:180
+#@ uBillboard
+msgid "Billboards imported successfully"
+msgstr "Billboards imported successfully"
+
+#: lib/uBillboard.class.php:35
+#@ uBillboard
+msgid "Pause on video"
+msgstr "Pause on video"
+
+#: lib/uBillboard.class.php:37
+#@ uBillboard
+msgid "Pause playback if slide with embedded video is encountered."
+msgstr "Pause playback if slide with embedded video is encountered."
+
+#: lib/uBillboard.class.php:82
+#@ uBillboard
+msgid "Silver"
+msgstr "Silver"
+
+#: lib/uBillboard.class.php:184
+#@ uBillboard
+msgid "Thumbnail border hover color"
+msgstr "Thumbnail border hover color"
+
+#: lib/uBillboard.class.php:185
+#@ uBillboard
+msgid "Border color of thumbnail on mouse over"
+msgstr "Border color of thumbnail on mouse over"
+
+#: lib/uBillboardSlide.class.php:17
+#@ uBillboard
+msgid "Use Relative Paths"
+msgstr "Use Relative Paths"
+
+#: lib/uBillboardSlide.class.php:27
+#@ uBillboard
+msgid "Transparent Background"
+msgstr "Transparent Background"
+
+#: lib/uBillboardSlide.class.php:89
+#@ uBillboard
+msgid "Chessboard"
+msgstr "Chessboard"
+
+#: lib/uBillboardSlide.class.php:90
+#@ uBillboard
+msgid "Zig-zag Horizontal"
+msgstr "Zig-zag Horizontal"
+
+#: lib/uBillboardSlide.class.php:91
+#@ uBillboard
+msgid "Zig-zag Vertical"
+msgstr "Zig-zag Vertical"
+
+#: lib/uBillboardSlide.class.php:97
+#@ uBillboard
+msgid "Content Type"
+msgstr "Content Type"
+
+#: lib/uBillboardSlide.class.php:99
+#@ uBillboard
+msgid "No Content"
+msgstr "No Content"
+
+#: lib/uBillboardSlide.class.php:100
+#: lib/uBillboardSlide.class.php:774
+#@ uBillboard
+msgid "Content Editor"
+msgstr "Content Editor"
+
+#: lib/uBillboardSlide.class.php:101
+#@ uBillboard
+msgid "Embedded Content"
+msgstr "Embedded Content"
+
+#: lib/uBillboardSlide.class.php:102
+#@ uBillboard
+msgid "Blog-based Dynamic Content"
+msgstr "Blog-based Dynamic Content"
+
+#: lib/uBillboardSlide.class.php:112
+#@ uBillboard
+msgid "Text Evaluation"
+msgstr "Text Evaluation"
+
+#: lib/uBillboardSlide.class.php:114
+#@ uBillboard
+msgid "Textile"
+msgstr "Textile"
+
+#: lib/uBillboardSlide.class.php:115
+#@ uBillboard
+msgid "HTML"
+msgstr "HTML"
+
+#: lib/uBillboardSlide.class.php:121
+#@ uBillboard
+msgid "URL of the Embedded Content"
+msgstr "URL of the Embedded Content"
+
+#: lib/uBillboardSlide.class.php:125
+#@ uBillboard
+msgid "Blog post offset"
+msgstr "Blog post offset"
+
+#: lib/uBillboardSlide.class.php:143
+#@ uBillboard
+msgid "Post category"
+msgstr "Post category"
+
+#: lib/uBillboardSlide.class.php:776
+#@ uBillboard
+msgid "Add new box"
+msgstr "Add new box"
+
+#: lib/uBillboardSlide.class.php:777
+#@ uBillboard
+msgid "Remove currently focused box"
+msgstr "Remove currently focused box"
+
+#: lib/uBillboardSlide.class.php:781
+#@ uBillboard
+msgid "Inherit"
+msgstr "Inherit"
+
+#: lib/uBillboardSlide.class.php:782
+#@ uBillboard
+msgid "Transparent"
+msgstr "Transparent"
+
+#: lib/uBillboardSlide.class.php:786
+#@ uBillboard
+msgid "Help"
+msgstr "Help"
+
+#: admin/billboard-list.php:40
+#@ uBillboard
+msgid "Apply"
+msgstr ""
+
+#: admin/billboard-list.php:51
+#: admin/billboard-list.php:60
+#@ uBillboard
+msgid "Slides"
+msgstr ""
+
+#: billboard.php:508
+#@ uBillboard
+msgid "Really delete all selected sliders? This is not undoable"
+msgstr ""
+
+#: lib/embed.php:43
+#@ uBillboard
+msgid "cURL not installed"
+msgstr ""
+
+#: lib/uBillboard.class.php:84
+#@ uBillboard
+msgid "uBillboard v2"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:32
+#@ uBillboard
+msgid "Tile background image"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:42
+#@ uBillboard
+msgid "Open in a new window"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:47
+#@ uBillboard
+msgid "Stop animation on this slide"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:69
+#@ uBillboard
+msgid "Crossfade"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:596
+#@ uBillboard
+msgid "Read More"
+msgstr ""
+
+#: lib/uBillboardSlide.class.php:840
+#@ uBillboard
+msgid "Image URL"
+msgstr ""
+

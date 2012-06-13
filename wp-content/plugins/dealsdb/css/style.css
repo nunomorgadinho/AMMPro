@@ -1,0 +1,72 @@
+/*
+Theme Name: ClassiPress
+Theme URI: http://wpclassipress.com/
+Description: Premium classified ads theme for WordPress
+Version: 2.9.2
+Author: David Cowgill
+Author URI: http://wpclassipress.com/
+*/
+
+@import url("styles/master.css");
+
+.header h1 a { color: #005870; text-decoration: none; }
+.header p { background: #edfbff; border: solid 10px #edfbff; color: #1599BC; font-size: 14px; margin: 0px;}
+.header_right a{font-size:10px; color:#0496BB}
+
+#nav li ul li{border-bottom:1px solid #EEEEEE; border-width:0 1px 1px; background:#F3FCFE}
+
+#catnav a{padding: 5px 10px; display: block; text-decoration: none; color: #005870; z-index:100}
+#catnav li.current-cat a { background-color:#DAF5FC; display:block; padding:5px 10px; }
+#catnav li a:hover { background: #CEE9EF; }
+#catnav li ul li{border-bottom:1px solid #EEEEEE; border-width:0 1px 1px; background:#F3FCFE}
+
+.topbar { border-top: solid 1px #3BAAC8; border-bottom: solid 1px #3BAAC8; background: url(styles/default/topbarbg.jpg) repeat-x center top; margin: 20px 0 0 0; padding: 10px 0 10px 0; }
+.search { width: 404px; height: 49px; background: url(styles/default/searchbg.jpg) no-repeat center top; float: left; }
+.postbutton { float: right; width: 231px; background: url(styles/default/postbuton.jpg) no-repeat center top; display: block; font-size: 17px; color: #ffffff; text-decoration: none; text-align: center; padding: 12px 0 16px 0; outline: none; }
+
+.main { border: solid 20px #DAF5FC; }
+.ins { background: #DAF5FC; }
+
+.listing .head {font-size: 17px; color: #ffffff; padding: 10px 0 13px 0; background: url(styles/default/headbg.jpg); }
+
+.list div a { text-decoration: none; color: #0582A4; }
+.list div.no { background: #F1FCFF; }
+.list div.no:hover,.list div.alt:hover, #sticky:hover { background-color: #f4f4f4; }
+.list div.alt { background: #E0F4F9; }
+
+.footer { border: solid 20px #E0F4F9; background: #E0F4F9; width: 940px; margin: 20px auto 0px auto; color: #1E6476; }
+.footer a { color: #1E6476; }
+
+.left .title h2 { font-size: 28px; font-family: 'Arial', 'Trebuchet MS', 'Verdana', sans-serif; font-weight: bold; line-height: 30px; width: 400px; float: left; color: #058EB3; }
+.left .title .prices { background: #FF2A00; float: right; max-width:150px; padding: 15px; line-height: 30px; font-size: 35px; font-family: 'Arial', 'Trebuchet MS', 'Verdana'; color: #ffffff;}
+.left .product h3 { font-size: 17px; font-weight: bold; line-height: 17px; font-family: 'Arial', 'Trebuchet MS', 'Verdana'; color: #586B70; border-bottom: solid 1px #D7EAEF; padding-bottom: 5px; clear:both; }
+
+.ins .right { width: 270px; float: right; border: solid 15px #C2EAF4; background: #C2EAF4; }
+.ins .right h2 { font-size: 22px; font-weight: bold; font-family: 'Arial', 'Trebuchet MS', 'Verdana'; line-height: 22px; font-weight: bold; color: #005A7C; border-bottom: solid 1px #AAD4DF; padding-bottom: 5px;}
+
+.classform { background: #ffffff; padding: 10px; width: 660px; margin: 10px auto 0; }
+.classform .adfields { border: solid 1px #59A6B9; padding: 5px; margin-bottom: 10px; }
+.classform select { margin-bottom: 10px; padding: 5px; border: solid 1px #59A6B9; width:200px; }
+.classform input.postit {border: solid #ffffff; padding:5px; font-size: 17px; color: #ffffff; background: #069BC3; cursor: pointer; }
+input.lbutton { background:#069BC3 none repeat scroll 0 0;border:none;font-weight:bold;color:#FFFFFF;cursor:pointer;font-size:13px;padding:5px; }
+
+.button2 { background: url(styles/default/post-now.jpg) top center no-repeat; width:148px; height:41px; }
+
+.post_head_button { background: url(styles/default/post-now.jpg) top center no-repeat; width:148px; height:41px; }
+.next_post_link { background: url(styles/default/next.jpg) top center no-repeat; width:119px; height:33px; }
+.previous_post_link{background:url(styles/default/back.jpg) top center no-repeat; width:119px; height:33px}
+
+.email_form{color:#375158; border-top:1px #AAD4DF solid; padding-top:15px; padding-left:15px}
+.email_form a{font-size:17px; font-family:'Arial','Trebuchet MS','Verdana',sans-serif; background:url(styles/default/email.png) 35px 3px no-repeat; font-weight:bold; display:block; text-decoration:none; text-align:center; color:#058EB3}
+.email_form input{margin-bottom:5px; background-color:#DAF5FC; border:1px #005A7C solid; padding:2px 5px; width:228px}
+.email_form textarea{margin-bottom:5px; background-color:#DAF5FC; border:1px #005A7C solid; padding:5px; width:228px; height:150px}
+
+.like_input{margin-bottom:5px; background-color:#DAF5FC; border:1px #005A7C solid; padding:3px 5px; width:228px}
+.register_button_img{background:url(styles/default/register.jpg) top center no-repeat; width:87px; height:17px}
+
+.sidebar_box{border-top:1px #AAD4DF solid}
+.sidebar_box h3{margin:0; padding:7px 0; text-align:center; font-family:Arial,Verdana; font-weight:bold; font-size:17px; color:#058EB3}
+
+.subnav{padding:5px 10px; background-color:#0CB1DE}
+
+.post_now_box{width:148px; margin:0 auto; color:#018fb7; font-weight:bold; font-size:15px; font-family:"Trebuchet MS"; text-align:left}
