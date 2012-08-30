@@ -622,6 +622,12 @@ background:#737373; background:-moz-linear-gradient(top, #737373 0%, #5b5b5b 100
 .signup aside div input.zipcode {width:100px;}
 .signup article {width:500px;}
 .signup h4, .signup p {padding:5px 20px; font:1em/1.5em "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;}
+
+.signup p.form-row{
+	padding: 0px 5px;
+}
+
+
 .signup h4 {padding-top:20px; font-size:1.4em;}
 .example:before {border-radius:5px 5px 5px 5px; border-top:1px solid #3A3731; content:" "; display:block; height:10px; left:2px; position:absolute; right:2px; top:1px;}
 .example {background: none repeat scroll 0 0 #6FC8B6; border: 1px solid #000000; border-radius: 5px 5px 5px 5px; box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.1); margin: 0 0 5px; overflow:hidden; position:relative; display:block; width:200px; float:left;}
@@ -961,3 +967,18 @@ footer section div ul li {margin:0 0 0 95px;}
 .contt {width:170px;}
 .contt ul li {margin:0 0 0 20px;}
 #site-generator {text-align:left; margin:20px 0; clear:left;}
+
+
+/*checkout*/
+#place_order{
+	width: 100px;
+	height: 40px;
+	font-size: 0.9em;
+}
+#payment div.form-row{ border-top:none;}
+
+form .form-row .input-checkbox {
+margin: -26px 8px 0 0;
+}
+
+p.terms .checkbox {padding-left: 15px;}

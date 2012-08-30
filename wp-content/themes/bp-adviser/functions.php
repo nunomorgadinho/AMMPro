@@ -383,4 +383,50 @@ function business_search_loop(){
 	 get_footer();	
 			
 }
+
+
+
+
+
+
+
+
+add_filter( 'woocommerce_billing_fields', 'filter_billing', 10, 1 );
+
+function filter_billing($fields_array){
+	
+	
+	
+	$billing = array(
+			'billing_first_name' 	=> array(
+					'name'=>	'billing_first_name',
+					'label'                 => __('Name','wc_disable_checkout_fields'),
+					'placeholder'  		=> __('Name','wc_disable_checkout_fields'),
+					'required'              => true,
+					'class'                 => array('form-row-first')
+			),
+			
+			'billing_email' 	=> array(
+					'label'                 => __('Email','wc_disable_checkout_fields'),
+					'placeholder'   	=> __('you@yourdomain.com','wc_disable_checkout_fields'),
+					'required'              => true,
+					'class'                 => array('form-row-first')
+			)
+	);
+	
+	
+	$disabled_billing = array('billing_last_name','billing_company', 'billing_address_1', 'billing_address_2', 'billing_city',
+			'billing_postcode', 'billing_country', 'billing_state','billing_phone');
+	
+	
+	
+	
+	$fields_array = array_replace($fields_array, $billing);
+	return array_diff_key($fields_array, array_flip($disabled_billing));
+}
+
+
+
+
+
 ?>

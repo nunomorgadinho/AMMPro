@@ -170,7 +170,27 @@ if ( is_user_logged_in() ) : ?>
 	  </article>
 	  
 	  <aside class="right">
-	  		<?php 
+		 	<?php 
+	  		
+	  		// get latest subscription
+	  		$query_args = array('posts_per_page' => 1, 'no_found_rows' => 1, 'post_status' => 'publish', 'post_type' => 'product');
+	  			  		
+	  		$r = new WP_Query($query_args);
+	  		
+	  		if ($r->have_posts()) :
+				$r->the_post();
+	  			$product = new WC_Product($post->ID); 
+	  			
+	  			// If cart is empty add ourt subscription to cart and render checkout page.
+	  			$cart = $woocommerce->cart ;
+	  			if($cart->get_cart_contents_count() == 0)
+	  				$cart->add_to_cart($product->id,1);
+	  			
+	  			
+	  			
+	  			woocommerce_get_template( 'checkout/form-checkout.php' );
+
+	  		endif;
 			// TODO: herb - adding the front page product to cart
 		//	include ('wpsc-ajax.functions.php');
 			//ob_start();
@@ -180,13 +200,7 @@ if ( is_user_logged_in() ) : ?>
 	  	//	include ("wpsc-shopping_cart_page_ammpro.php"); ?>
 	  </aside>  
 	  </section> <!--  signup -->
-	  
-	  <section class="businessDir">
-	    	<p class="left">By clicking Create my account you agree to the Terms of Service, Privacy, and Refund policies.</p>
-	    	<input type='submit' value='<?php _e('CREATE MY ACCOUNT ', 'wpsc');?>' name='submit' class='make_purchase wpsc_buy_button btn right btn6' onclick="document.forms['wpsc_home_checkout_form'].submit();" />
-	        <!-- <a href="" class="btn right btn6" onclick="document.forms['wpsc_home_checkout_form'].submit();">Create my Account</a> -->
-	        <!-- <a href="#" class="btn right btn6" onclick="document.wpsc_home_checkout_form.submit(); return false;">Create my Account</a> -->
-	  </section> <!-- .businessDir -->
+
 	 
 </section> <!-- .inforeso -->
 
