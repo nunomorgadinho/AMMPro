@@ -1,0 +1,29 @@
+*** WooCommerce Subscriptions Changelog ***
+
+2012.08.22 - version 1.1.3
+ * Updating to WooCommerce 1.6.3 PayPal invoice/order key changes
+ * Better sorting of dates, especially last/next payment dates in the Subscriptions Management table
+ * Ordering users by display name in Subscriptions Management table
+ * Fixing products set as subscriptions against a users account in 1.1.2
+ * Adding version dependant upgrade script
+
+2012.08.13 - version 1.1.2
+ * Adding a safeguard against WP-Cron's infinite loop
+
+2012.08.03 - version 1.1.1
+ * Fixing multisite bug which displayed a user's subscriptions from each site in a network on every other site in the network
+ * Fixing multisite activation
+
+2012.07.26 - version 1.1
+ * Free trial periods can now be added to the beginning of a subscription
+ * Subscriptions can now be manually created by adding a subscription to an order or creating a new order with a subscription
+ * Subscriptions can now be billed at different intervals of each period, e.g. $5 every 2 weeks or $10 every 6 months
+ * Subscriptions can now be suspended and reactivated (by subscribers and store managers)
+ * Subscriptions purchased with PayPal Standard can now be cancelled (and suspended/reactivated)
+ * Guest checkout & sign-up login WooCommerce admin settings are now honoured for all transactions that do not include a subscription
+ * When a customer ID is changed on an order, any subscriptions on that order are transferred to the new customer
+ * Fixing PayPal IPN EOT error causing cancelled subscriptions to be marked as expired
+ * Fixing i18n implementation to allow translations
+
+2012.06.21 - version 1.0
+ * First Release
