@@ -17,13 +17,12 @@
 						<?php the_content( __( '<p class="serif">Read the rest of this page &rarr;</p>', 'buddypress' ) ); ?>
 
 						<?php wp_link_pages( array( 'before' => '<div class="page-link"><p>' . __( 'Pages: ', 'buddypress' ), 'after' => '</p></div>', 'next_or_number' => 'number' ) ); ?>
-						<?php edit_post_link( __( 'Edit this page.', 'buddypress' ), '<p class="edit-link">', '</p>'); ?>
-
+					
 					</div>
 
 				</div>
 
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 
 			<?php endwhile; endif; ?>
 
