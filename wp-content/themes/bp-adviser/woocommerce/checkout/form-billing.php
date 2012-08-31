@@ -11,7 +11,7 @@ global $woocommerce;
 ?>
 
 <?php do_action('woocommerce_before_checkout_billing_form', $checkout); ?>
-	<p><?php _e('Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce'); ?></p>
+	<p><?php _e('Create an account by entering the information below. If you are a returning customer please <a href="'.get_bloginfo('siteurl').'/log-in'.'">login </a> at the top of the page.', 'woocommerce'); ?></p>
 <?php foreach ($checkout->checkout_fields['billing'] as $key => $field) : ?>
 
 	<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
