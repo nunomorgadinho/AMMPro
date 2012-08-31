@@ -21,6 +21,7 @@ function bp_dtheme_widgets_init() {
 }
 	// Register the widget columns
 	// Area 2, located in the sidebar. Empty by default.
+	
 	register_sidebar( array(
 		'name'          => 'Subbed Article Review Widget Area',
 		'id'            => 'subrticles-widget-area',
@@ -419,9 +420,7 @@ function filter_billing($fields_array){
 			'billing_postcode', 'billing_country', 'billing_state','billing_phone');
 	
 	
-	
-	
-	$fields_array = array_replace($fields_array, $billing);
+	$fields_array = array_merge($fields_array, $billing);
 	return array_diff_key($fields_array, array_flip($disabled_billing));
 }
 
