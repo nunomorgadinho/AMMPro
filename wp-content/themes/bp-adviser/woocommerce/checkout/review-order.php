@@ -13,10 +13,8 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 ?>
 <div id="order_review">
 
-	
-
 	<div id="payment">
-		<?php if ($woocommerce->cart->needs_payment()) : ?>
+		
 		<ul class="payment_methods methods">
 			<?php
 				$available_gateways = $woocommerce->payment_gateways->get_available_payment_gateways();
@@ -58,7 +56,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 				endif;
 			?>
 		</ul>
-		<?php endif; ?>
+		
 
 		<div class="form-row place-order">
 

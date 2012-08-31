@@ -184,20 +184,16 @@ if ( is_user_logged_in() ) : ?>
 	  			// If cart is empty add ourt subscription to cart and render checkout page.
 	  			$cart = $woocommerce->cart ;
 	  			if($cart->get_cart_contents_count() == 0)
+	  			{
 	  				$cart->add_to_cart($product->id,1);
-	  			
-	  			
+	  				
+	  			}
+				
 	  			
 	  			woocommerce_get_template( 'checkout/form-checkout.php' );
 
 	  		endif;
-			// TODO: herb - adding the front page product to cart
-		//	include ('wpsc-ajax.functions.php');
-			//ob_start();
-			//ob_end_clean();
-		//	wpsc_empty_cart_2();
-		//	wpsc_add_to_cart_2(FRONT_PAGE_PRODUCT_ID); 
-	  	//	include ("wpsc-shopping_cart_page_ammpro.php"); ?>
+		?>
 	  </aside>  
 	  </section> <!--  signup -->
 

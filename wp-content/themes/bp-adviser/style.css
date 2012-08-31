@@ -982,3 +982,5 @@ margin: -26px 8px 0 0;
 }
 
 p.terms .checkbox {padding-left: 15px;}
+
+.signup .checkout .payment_methods{display:none;}
