@@ -59,7 +59,7 @@
 				<div class="nineighty">
                 <div class="letmeinkey">
                 	<div class="nineighty">
-					<h1 class="ir"><a href="<?php echo home_url(); ?>" title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>"><?php bp_site_name(); ?></a></h1>
+					<a href="<?php echo home_url( '/' ); ?>" title="Art Market Monitor Pro"><h1 class="ir"></h1></a>
                     <!--<div class="logreg right"><a href="< ?php echo home_url(); ?>/log-in">Log in</a> or Register</div>-->
                     </div>
                     <h2>Log In to</h2>

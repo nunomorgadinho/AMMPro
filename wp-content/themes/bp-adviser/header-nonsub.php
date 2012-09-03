@@ -170,7 +170,7 @@ $(document).ready(function () {
 		<header class="nosub nett">
         <article class="globalwall">
             <div class="nineighty">
-            <h1 class="ir"><a href="/" title="Art Market Monitor Pro">Art Market Monitor Pro</a></h1>
+            <a href="<?php echo home_url( '/' ); ?>" title="Art Market Monitor Pro"><h1 class="ir"></h1></a>
             <div class="logreg right"><a href="<?php echo home_url( '/' ); ?>log-in">Log in</a> or <a href="#signup" class="color1">Register</a></div>
             </div>
             <div class="nineighty global">

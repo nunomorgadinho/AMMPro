@@ -10,7 +10,7 @@
 <div id="page">
 <header id="branding" role="banner">
   <div class="nineighty">
-    <h1 class="ir"><a href="http://localhost/ammpro" title="Home">Art Market Monitor Pro</a></h1>
+    <a href="<?php echo home_url( '/' ); ?>" title="Art Market Monitor Pro"><h1 class="ir"></h1></a>
     <form role="search" method="get" id="searchform" action="http://localhost/ammpro/">
       <div>
         <input type="text" value="" name="s" id="s" placeholder="Search the Archive">
