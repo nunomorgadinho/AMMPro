@@ -6,10 +6,10 @@ Tags: registration, profile, user registration, custom field registration, custo
 custom registration, custom registration form, custom registration page, extra user fields, registration page, user custom fields, user listing, user login, user registration form, front-end login, 
 front-end register, front-end registration, frontend edit profile, edit profile
 Requires at least: 3.1
-Tested up to: 3.3
-Stable tag: 1.1.24
+Tested up to: 3.5
+Stable tag: 1.1.37
 
-Simple to use profile plugin allowing front-end login, registration and edit profile by using shortcodes. 
+Simple to use profile plugin allowing front-end login, registration and edit profile by using shortcodes.
  
 == Description ==
 
@@ -47,6 +47,11 @@ The [Pro version](http://www.cozmoslabs.com/wordpress-profile-builder/) has the 
 * Select one of the 2 additional CSS styles: black or white
 * Access to support forums and documentation
 * 1 Year of Updates / Priority Support
+* Addons (e.g. custom redirects)
+* Fully Customizable User-Listing
+* Admin Approval
+* Email Confirmation
+* reCAPTCHA on registration form
 
 [Click here to find out more](http://www.cozmoslabs.com/wordpress-profile-builder/) or watch the video below:
 
@@ -81,14 +86,52 @@ This plugin only adds/removes fields in the front-end. The default information-f
 
 
 == Screenshots ==
-1. Basic information: screenshot1.jpg
-2. Layout Control: screenshot2.jpg
-3. Show/Hide Admin Bar: screenshot3.jpg
-4. Select Default User Fields: screenshot4
-6. Register Page: screenshot6.jpg
-7. Logged in Page: screenshot7.jpg
+1. General Settings: screenshot1.jpg
+2. Show/Hide Admin Bar: screenshot3.jpg
+3. Select Default User Fields: screenshot4
+4. Register Page: screenshot6.jpg
+5. Logged in Page: screenshot7.jpg
 
 == Changelog ==
+= 1.1.37 =
+Minor changes to the readme file.
+
+= 1.1.36 =
+Minor changes to the readme file.
+
+= 1.1.35 =
+Added support for WP 3.5
+
+= 1.1.34 =
+Separated some of the plugin's functions into separate files. Also fixed a few bugs.
+
+= 1.1.33 =
+Fixed function where it wouldn't create the _signups table in the free version.
+
+= 1.1.32 =
+Error fixed.
+
+= 1.1.31 =
+Minor updates to the plugin files.
+
+= 1.1.30 =
+Minor changes to the plugin.
+
+= 1.1.29 =
+Minor changes to the readme file.
+
+= 1.1.28 =
+Changes to the readme file.
+
+= 1.1.27 =
+Fixed few warnings.
+
+= 1.1.26 =
+Minor changes
+
+= 1.1.25 =
+Different security issues fixed with other updates.
+
 = 1.1.24 = 
 Wordpress 3.3 support
 

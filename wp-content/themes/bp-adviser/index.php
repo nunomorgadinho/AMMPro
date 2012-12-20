@@ -154,16 +154,18 @@ if ( is_user_logged_in() ) : ?>
 	<section class="signup">
 	  <article class="left">
 		  <h4>Professional + Productivity</h4>
-		  <p>Art Market Monitor Pro uses a 1 click sign up system to make it easy to subscribe to our news service. Try it free for 7 days once you have signed up. If you decide to cancel just log-in to your account home and unsubscribe. If you decide you want to cancel after the 7 days we will refund your pro-rated balance.</p>
-		  <p>We ask for credit card information before you begin your trial so you can immediately see what we have to offer. No pre-qualifications over the phone, no hidden fees.</p>
+		  <p>Art Market Monitor Pro uses a 1 click sign up system to make it easy to subscribe to our service. If you ever decide to cancel just log-in to your account home and unsubscribe. If you are unhappy until after 7 days we will refund your pro-rated balance.</p>
+		  <p>No credit card information required. No pre-qualifications over the phone, no hidden fees.</p>
 		
+		
+			<p>We trust you, a smart professional, value the painstaking diligence we put into generating our premium content over the course of each year. And we work hard to deliver it to you for less than a dollar a day!</p>
 			<section class="rate block4">
 				<ul>
 					<li>Art Market Monitor Subscription</li>
-					<li><date>7 Days free, no charge until Day, Month, Year.</date></li>
+					<li><date>Limited time offer</date></li>
 				</ul>
 				<ul>
-					<li>300.00</li>
+					<li>13.00</li>
 				</ul>
 			</section>
 	  

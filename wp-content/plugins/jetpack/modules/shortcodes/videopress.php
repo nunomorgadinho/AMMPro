@@ -4,7 +4,7 @@
  * @category video
  * @author Automattic Inc
  * @link http://automattic.com/wordpress-plugins/#videopress VideoPress
- * @version 1.5
+ * @version 1.5.4
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -15,8 +15,8 @@ Description: Upload new videos to <a href="http://videopress.com/">VideoPress</a
 Author: Automattic, Niall Kennedy, Joseph Scott, Gary Pendergast
 Contributor: Hailin Wu
 Author URI: http://automattic.com/wordpress-plugins/#videopress
-Version: 1.5
-Stable tag: 1.5
+Version: 1.5.4
+Stable tag: 1.5.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -33,7 +33,7 @@ class VideoPress {
 	 * @var string
 	 * @since 1.3
 	 */
-	const version = '1.5';
+	const version = '1.5.4';
 
 	/**
 	 * Minimum allowed width. We don't expect videos viewed below this width to be useful; we drop small values to help save publishers from themselves.
@@ -67,11 +67,11 @@ class VideoPress {
 		if ( ! function_exists( 'json_decode' ) )
 			return;
 
-			add_action( 'wp_head', array( &$this, 'html_head' ), -1 ); // load before enqueue_scripts action
+			add_action( 'wp_head', array( $this, 'html_head' ), -1 ); // load before enqueue_scripts action
 
 		//allow either [videopress xyz] or [wpvideo xyz] for backward compatibility
-		add_shortcode( 'videopress', array( &$this, 'shortcode' ) );
-		add_shortcode( 'wpvideo', array( &$this, 'shortcode' ) );
+		add_shortcode( 'videopress', array( $this, 'shortcode' ) );
+		add_shortcode( 'wpvideo', array( $this, 'shortcode' ) );
 
 		// set default values
 		$this->js_loaded = false;
@@ -157,7 +157,7 @@ class VideoPress {
 		rewind_posts();
 
 		if ( ! empty( $guid ) )
-			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ), 20 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 	}
 
 	/**
@@ -186,7 +186,7 @@ class VideoPress {
 
 		wp_enqueue_script( 'swfobject', $swfobject, false. '2.2' );
 		wp_enqueue_script( 'jquery', $jquery, false, '1.4.4' );
-		wp_enqueue_script( 'videopress', $vpjs, array( 'jquery','swfobject' ), '1.07' );
+		wp_enqueue_script( 'videopress', $vpjs, array( 'jquery','swfobject' ), '1.09' );
 		
 		$this->js_loaded = true;
 		return true;
@@ -228,10 +228,24 @@ class VideoPress {
 			'w' => 0,
 			'freedom' => false,
 			'flashonly' => false,
-			'autoplay' => false
+			'autoplay' => false,
+			'hd' => false
 		), $attr ) );
 
 		$freedom = (bool) $freedom;
+		/**
+		 * Test if embedded blog prefers videos only displayed in Freedom-loving formats
+		 */
+		if ( $freedom === false && (bool) get_option( 'video_player_freedom', false ) )
+			$freedom = true;
+			
+		$forcestatic = get_option( 'video_player_static', false );
+
+		/**
+		* Set the video to HD if the blog option has it enabled
+		*/
+		if ( (bool) get_option( 'video_player_high_quality', false ) )
+			$hd = true;
 
 		$width = absint($w);
 		unset($w);
@@ -250,12 +264,14 @@ class VideoPress {
 		$options = array(
 			'freedom' => $freedom,
 			'force_flash' => (bool) $flashonly,
-			'autoplay' => (bool) $autoplay
+			'autoplay' => (bool) $autoplay,
+			'forcestatic' => $forcestatic,
+			'hd' => (bool) $hd
 		);
 		unset( $freedom );
 		unset( $flashonly );
 
-		add_action( 'wp_footer', array( &$this, 'print_scripts' ), -1 );
+		add_action( 'wp_footer', array( $this, 'print_scripts' ), -1 );
 
 		$player = new VideoPress_Player( $guid, $width, $options );
 		if ( $player instanceOf VideoPress_Player ) {
@@ -561,14 +577,7 @@ class VideoPress_Video {
 
 		// PHP 5.3.3 or newer can throw a warning on a bad input URI. catch that occurance just in case
 		try {
-			// use the component parameter of parse_url if current version of PHP supports
-			if ( version_compare(PHP_VERSION, '5.1.2', '>=') ) {
-				return parse_url( $url, PHP_URL_HOST );
-			} else {
-				$url_parts = parse_url( $url );
-				if ( $url_parts !== false && isset( $url_parts['host'] ) )
-					return $url_parts['host'];
-			}
+			return parse_url( $url, PHP_URL_HOST );
 		} catch (Exception $e){}
 		return false;
 	}
@@ -593,7 +602,6 @@ class VideoPress_Video {
 			$url = 'https://v.wordpress.com/data/wordpress.json';
 
 		$response = wp_remote_get( $url . '?' . http_build_query( $request_params, null, '&' ), array(
-			'httpversion' => '1.1',
 			'redirection' => 1,
 			'user-agent' => 'VideoPress plugin ' . VideoPress::version . '; WordPress ' . $wp_version . ' (' . home_url('/') . ')'
 		) );
@@ -798,12 +806,15 @@ class VideoPress_Player {
 			$content = '';
 		} elseif ( is_wp_error( $this->video ) ) {
 			$content = $this->error_message( $this->video );
-		} elseif ( ( isset( $this->video->restricted_embed ) && $this->video->restricted_embed === true ) || ( isset( $this->options['force_flash'] ) && $this->options['force_flash'] === true ) ) {
+		} elseif ( isset( $this->options['force_flash'] ) && $this->options['force_flash'] === true ) {
 			$content = $this->flash_object();
+		} elseif ( isset( $this->video->restricted_embed ) && $this->video->restricted_embed === true ) {
+			if( $this->options['forcestatic'] )
+				$content = $this->flash_object();
+			else
+				$content = $this->html5_dynamic();
 		} elseif ( isset( $this->options['freedom'] ) && $this->options['freedom'] === true ) {
 			$content = $this->html5_static();
-		} elseif ( ! in_the_loop() ) {
-			$content = $this->flash_object();
 		} else {
 			$content = $this->html5_dynamic();
 		}
@@ -1036,7 +1047,8 @@ class VideoPress_Player {
 			'blog' => absint( $this->video->blog_id ),
 			'post' => absint( $this->video->post_id ),
 			'duration'=> absint( $this->video->duration ),
-			'poster' => esc_url_raw( $this->video->poster_frame_uri, array( 'http', 'https' ) )
+			'poster' => esc_url_raw( $this->video->poster_frame_uri, array( 'http', 'https' ) ),
+			'hd' => (bool) $this->options['hd']
 		);
 		if ( isset( $this->video->videos ) ) {
 			if ( isset( $this->video->videos->mp4 ) && isset( $this->video->videos->mp4->url ) )
@@ -1053,10 +1065,7 @@ class VideoPress_Player {
 		$guid = $this->video->guid;
 		$guid_js = json_encode( $guid );
 		$html .= '<script type="text/javascript">' . PHP_EOL;
-		
-		// Only need to wait until document is ready if the JS is being loaded in the footer
-		if ( ! $videopress->js_loaded )
-			$html .= 'jQuery(document).ready(function() {';
+		$html .= 'jQuery(document).ready(function() {';
 
 		$html .= 'if ( !jQuery.VideoPress.data[' . json_encode($guid) . '] ) { jQuery.VideoPress.data[' . json_encode($guid) . '] = new Array(); }' . PHP_EOL;
 		$html .= 'jQuery.VideoPress.data[' . json_encode( $guid ) . '][' . $videopress->shown[$guid] . ']=' . json_encode($data) . ';' . PHP_EOL;
@@ -1103,8 +1112,7 @@ class VideoPress_Player {
 			$html .= '}';
 
 			// close the jQuery(document).ready() function
-			if ( !$videopress->js_loaded )
-				$html .= '});';
+			$html .= '});';
 		}
 		$html .= '</script>' . PHP_EOL;
 		$html .= '</div>' . PHP_EOL;

@@ -1,6 +1,63 @@
+label{
+  display: block;
+  margin: 1.5em 0;
+}
+
+h3{
+  margin: 3em 0 2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom:.75em;
+  clear: both;
+}
+
+#buttongroup1, #buttongroup2, #buttongroup3, #custom-txt div, #button-placement div{
+  display: block;
+  margin-right: 3em;
+  float: left;
+}
+#custom-txt div#txt-size, div#button-placement-options{
+  margin-right: 0;
+}
+#custom-button-preview {
+  clear:both;
+  padding-top: 20px;
+  margin-left: 2em;
+}
+#custom-button-preview img{
+  margin-right: 6px;
+}
+#custom, #placement-adv-options{
+  float: left;
+}
+
+#custom-txt, #custom-img {
+  margin: 2em 0 2em 2em;
+  clear: both;
+}
+
+.description{
+  color: #cacaca;
+}
+.printfriendly-text2{
+  font-family: verdana;
+  font-size: 14px;
+  color: #6D9F00;
+}
+select{
+  display: block;
+  margin: .5em .5em 2em 0;
+}
+select#javascript, select#website_protocol{
+  display: inline-block;
+  margin-bottom: 0;
+}
 input[type="radio"] {
 	cursor: pointer;
+	
+  margin-right: 10px;
+  vertical-align: middle;
 }
+
 
 /* WP lacks styling for type="number", so in here for now */
 input[type="number"] {
@@ -16,22 +73,57 @@ input[type="number"] {
 	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+	width: 36px;
+	margin-right: .5em;
+}
+#css{
+  font-size: 11px;
+  color:#bbb;
+}
+#css input{
+  margin: 0 6px 0 12px;
+  vertical-align: baseline;
+}
+#pf-shortcode{
+ 
+  margin-left: 2em;
+}
+.custom-logo label, .custom-logo input, #pf-favicon {
+  display: inline-block;
 }
 
-.radio {
-	margin: 0 5px 0 0;
-	vertical-align: text-top;
-	height: 25px;
+.custom-logo input {
+  width: 20em;
+}
+
+.custom-logo label {
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+label#pf-favicon {
+  vertical-align: baseline;
+  margin: 0;
+}
+
+.printfriendly-details input {
+  width: 20em;
+}
+
+.printfriendly-details label {
+  margin-left: 5px;
+  margin-right: 2px;
 }
 
 .icon32 {
 	background: url(images/pf-icon.png) center center no-repeat;	
 }
 
-.printfriendly-text {
-	margin-left: 3px;	
+#after-submit{
+  border-top: 2px dashed #dfdfdf;
+  margin:4em 0;
+  padding-top:1em;
 }
-
 #addmanual-help {
 	display: none;	
 }
@@ -225,8 +317,4 @@ input[type="number"] {
 
 .colorpicker_slider {
 	background-position: bottom;
-}
-
-.clear {
-	clear: both;
 }

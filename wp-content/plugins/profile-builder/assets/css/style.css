@@ -45,12 +45,12 @@ a:hover strong {
   margin: 15px;
 }
 #framework_wrap #header {
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   background: #6d6d6d url(../images/header.png) repeat-x left top;
   border: 1px solid #555;
   height: 71px;
@@ -255,7 +255,11 @@ a:hover strong {
 		margin-left:60px;
 		
 	}
-  
+	
+    #framework_wrap #content_wrap .pro-noserial-info {
+		padding: 20px;
+		background:#fffbcc;
+   }
   /* Content Inner */
   #framework_wrap #content {
     padding: 0;
@@ -914,7 +918,8 @@ div.file_wrap {
     }
 
 #register-profile-builder .validateStatus{
-
+	position:relative;
+	top:3px;
 }
 .wppb-serialnumber-descr{
 	padding-left:100px;
@@ -923,7 +928,7 @@ div.file_wrap {
 	width:335px;
 }
 	
-#plugin-layout input[type="submit"], #show-hide-admin-bar input[type="submit"], #default-fields input[type="submit"], #register-profile-builder input[type="submit"] {
+#general-settings input[type="submit"], #show-hide-admin-bar input[type="submit"], #default-fields input[type="submit"], #register-profile-builder input[type="submit"] {
 	position:absolute; 
 	bottom:0; 
 	right:0; 
@@ -934,16 +939,50 @@ div.file_wrap {
 #secondColumn, #thirdColumn{
 	width:25%;
 }
-
-#framework_wrap #content .wppb_default_style {
-    display: inline-block !important;
-    left: 18px;
-    margin-bottom: 0 !important;
-    position: relative;
-    vertical-align: middle;
-    width: 100px;
+.options_tabs{
+	margin:0;
 }
-#framework_wrap #content select {
-    height: 28px;
-    padding: 4px 5px;
+
+#show-hide-admin-bar table th{
+	font-size: 10px !important;
+	padding: 6px 10px;
+	font-weight: bold !important;
+}
+
+#show-hide-admin-bar table td{
+	font-size: 11px !important;
+}
+
+#framework_wrap #content .wppb_general_settings{
+	position:relative;
+	left:18px;
+	vertical-align:middle;
+	display:inline-block !important;
+	margin-bottom:0 !important;
+	width: 100px;
+	height: 25px;
+	font-size:11px;
+	*display:inline !important;
+	zoom:1;
+}
+#framework_wrap #content .wppb_general_settings2{
+	position:relative;
+	left:18px;
+	vertical-align:middle;
+	display:inline-block !important;
+	margin-bottom:0 !important;
+	width: 78px;
+	height: 25px;
+	font-size:11px;
+	*display:inline !important;
+	zoom:1;
+}
+#framework_wrap #content #generalSettingFont{
+	font-size:11px;
+}
+
+#content_wrap #wppb_buyNowButton{
+	position: relative;
+	left: -34px;
+	top:-42px;
 }

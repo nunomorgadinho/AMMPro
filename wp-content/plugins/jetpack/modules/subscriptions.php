@@ -2,9 +2,39 @@
 /**
  * Module Name: Subscriptions
  * Module Description: Allow users to subscribe to your posts and comments to receive a notification via email.
- * Sort Order: 1
+ * Sort Order: 3
  * First Introduced: 1.2
  */
+
+add_action( 'jetpack_modules_loaded', 'jetpack_subscriptions_load' );
+ 
+Jetpack_Sync::sync_options( __FILE__,
+	'home',
+	'blogname',
+	'siteurl',
+	'page_on_front',
+	'permalink_structure',
+	'category_base',
+	'rss_use_excerpt',
+	'subscription_options',
+	'stb_enabled',
+	'stc_enabled',
+	'tag_base'
+);
+
+Jetpack_Sync::sync_posts( __FILE__ );
+Jetpack_Sync::sync_comments( __FILE__ );
+
+function jetpack_subscriptions_load() {
+	Jetpack::enable_module_configurable( __FILE__ );
+	Jetpack::module_configuration_load( __FILE__, 'jetpack_subscriptions_configuration_load' );
+}
+
+function jetpack_subscriptions_configuration_load() {
+	wp_safe_redirect( admin_url( 'options-discussion.php#jetpack-subscriptions-settings' ) );
+	exit;
+}
+
 class Jetpack_Subscriptions {
 	var $jetpack = false;
 
@@ -12,44 +42,38 @@ class Jetpack_Subscriptions {
 	 * Singleton
 	 * @static
 	 */
-	function &init() {
-		static $instance = array();
+	function init() {
+		static $instance = false;
 
 		if ( !$instance ) {
-			$instance[0] =& new Jetpack_Subscriptions;
+			$instance = new Jetpack_Subscriptions;
 		}
 
-		return $instance[0];
+		return $instance;
 	}
 
 	function Jetpack_Subscriptions() {
 		$this->jetpack = Jetpack::init();
 
-		add_filter( 'jetpack_xmlrpc_methods', array( &$this, 'xmlrpc_methods' ) );
+		add_filter( 'jetpack_xmlrpc_methods', array( $this, 'xmlrpc_methods' ) );
 
-		// Handle Posts
-		add_action( 'transition_post_status', array( &$this, 'transition_post_status' ), 10, 3 );
-		add_action( 'trashed_post', array( &$this, 'delete_post' ) );
-		add_action( 'delete_post', array( &$this, 'delete_post' ) );
+		// @todo remove sync from subscriptions and move elsewhere...
 
-		// Handle Comments
-		add_action( 'wp_insert_comment', array( &$this, 'save_comment' ), 10, 2 );
-		add_action( 'transition_comment_status', array( &$this, 'transition_comment_status' ), 10, 3 );
-		add_action( 'trashed_comment', array( &$this, 'delete_comment' ) );
-		add_action( 'delete_comment', array( &$this, 'delete_comment' ) );
+		// Add Configuration Page
+		add_action( 'admin_init', array( $this, 'configure' ) );
 
 		// Set up the subscription widget.
-		add_action( 'widgets_init', array( &$this, 'widget_init' ) );
+		add_action( 'widgets_init', array( $this, 'widget_init' ) );
 
 		// Catch subscription widget submits
 		if ( isset( $_REQUEST['jetpack_subscriptions_widget'] ) )
-			add_action( 'template_redirect', array( &$this, 'widget_submit' ) );
+			add_action( 'template_redirect', array( $this, 'widget_submit' ) );
 
 		// Set up the comment subscription checkboxes
-		add_action( 'comment_form', array( &$this, 'comment_subscribe_init' ) );
+		add_action( 'comment_form', array( $this, 'comment_subscribe_init' ) );
 
 		// Catch comment posts and check for subscriptions.
-		add_action( 'comment_post', array( &$this, 'comment_subscribe_submit' ), 50, 2 );
+		add_action( 'comment_post', array( $this, 'comment_subscribe_submit' ), 50, 2 );
 	}
 
 	function post_is_public( $the_post ) {
@@ -60,60 +84,6 @@ class Jetpack_Subscriptions {
 		return 'publish' === $post->post_status && strlen( (string) $post->post_password ) < 1;
 	}
 
-	function transition_post_status( $new, $old, $the_post ) {
-		if ( 'publish' == $old && 'publish' != $new ) {
-			// A published post was trashed or something else
-			$this->delete_post( $the_post->ID );
-			return;
-		}
-
-		clean_post_cache( $the_post->ID );
-
-		// Publish a new post
-		if (
-			'publish' != $old
-		&&
-			$this->post_is_public( $the_post->ID )
-		&&
-			( 'post' == $the_post->post_type || 'page' == $the_post->post_type )
-		) {
-			$this->jetpack->sync->post( $the_post->ID );
-		}
-	}
-
-	function delete_post( $id ) {
-		$the_post = get_post( $id );
-		if ( 'post' == $the_post->post_type || 'page' == $the_post->post_type )
-			$this->jetpack->sync->delete_post( $id );
-	}
-
-	function save_comment( $id, $comment ) {
-		if ( !$this->post_is_public( $comment->comment_post_ID ) ) {
-			return;
-		}
-
-		if ( 1 == $comment->comment_approved ) {
-			$this->jetpack->sync->comment( $id );
-		}
-	}
-
-	function transition_comment_status( $new, $old, $the_comment ) {
-		if ( !$this->post_is_public( $the_comment->comment_post_ID ) ) {
-			return;
-		}
-
-		if ( 'approved' == $new ) {
-			$this->jetpack->sync->comment( $the_comment->comment_ID );
-		} else if ( 'approved' == $old && 'approved' != $new ) {
-			// Delete comments that are changing to anything but approved
-			$this->jetpack->sync->delete_comment( $the_comment->comment_ID );
-		}
-	}
-
-	function delete_comment( $id ) {
-		$this->jetpack->sync->delete_comment( $id );
-	}
-
 	/**
 	 * Jetpack_Subscriptions::xmlrpc_methods()
 	 *
@@ -122,7 +92,7 @@ class Jetpack_Subscriptions {
 	 */
 	function xmlrpc_methods( $methods ) {
 		return array_merge( $methods, array(
-			'jetpack.subscriptions.subscribe' => array( &$this, 'subscribe' ),
+			'jetpack.subscriptions.subscribe' => array( $this, 'subscribe' ),
 		) );
 	}
 
@@ -131,10 +101,165 @@ class Jetpack_Subscriptions {
 	 *
 	 * Jetpack Subscriptions configuration screen.
 	 */
-	function configure() {
-		echo '<p>This is the configuration page for the Subscriptions Module.</p>';
+	function configure() {	
+		// Create the section
+		add_settings_section(
+			'jetpack_subscriptions',
+			__( 'Jetpack Subscriptions Settings', 'jetpack' ),
+			array( $this, 'subscriptions_settings_section' ),
+			'discussion'
+		);
+
+		/** Subscribe to Posts ***************************************************/
+
+		add_settings_field(
+			'jetpack_subscriptions_post_subscribe',
+			__( 'Follow Blog', 'jetpack' ),
+			array( $this, 'subscription_post_subscribe_setting' ),
+			'discussion',
+			'jetpack_subscriptions'
+		);
+
+		register_setting(
+			'discussion',
+			'stb_enabled'
+		);
+
+		/** Subscribe to Comments ******************************************************/
+
+		add_settings_field(
+			'jetpack_subscriptions_comment_subscribe',
+			__( 'Follow Comments', 'jetpack' ),
+			array( $this, 'subscription_comment_subscribe_setting' ),
+			'discussion',
+			'jetpack_subscriptions'
+		);
+
+		register_setting(
+			'discussion',
+			'stc_enabled'
+		);
+		
+		/** Subscription Messaging Options ******************************************************/
+		
+		register_setting( 
+			'reading', 
+			'subscription_options', 
+			array( $this, 'validate_settings' ) 
+		);
+
+		add_settings_section( 
+			'email_settings', 
+			__( 'Follower Settings', 'jetpack' ), 
+			array( $this, 'reading_section' ), 
+			'reading'
+		);
+		
+		add_settings_field(
+			'invitation',
+			__( 'Blog follow email text' , 'jetpack' ), 
+			array( $this, 'setting_invitation' ), 
+			'reading', 
+			'email_settings'
+		);
+
+		add_settings_field(
+			'comment-follow',
+			__( 'Comment follow email text', 'jetpack' ), 
+			array( $this, 'setting_comment_follow' ), 
+			'reading', 
+			'email_settings'
+		);		
 	}
 
+	/**
+	 * Discussions setting section blurb
+	 *
+	 */
+	function subscriptions_settings_section() {
+	?>
+
+		<p id="jetpack-subscriptions-settings"><?php _e( 'Change whether your visitors can subscribe to your posts or comments or both.', 'jetpack' ); ?></p>
+
+	<?php
+	}
+
+	/**
+	 * Post Subscriptions Toggle
+	 *
+	 */
+	function subscription_post_subscribe_setting() {
+
+		$stb_enabled = get_option( 'stb_enabled', 1 ); ?>
+
+		<p class="description">
+			<input type="checkbox" name="stb_enabled" id="jetpack-post-subscribe" value="1" <?php checked( $stb_enabled, 1 ); ?> />
+			<?php _e( "Show a <em>'follow blog'</em> option in the comment form", 'jetpack' ); ?>
+		</p>
+	<?php
+	}
+
+	/**
+	 * Comments Subscriptions Toggle
+	 *
+	 */
+	function subscription_comment_subscribe_setting() {
+
+		$stc_enabled = get_option( 'stc_enabled', 1 ); ?>
+
+		<p class="description">
+			<input type="checkbox" name="stc_enabled" id="jetpack-comment-subscribe" value="1" <?php checked( $stc_enabled, 1 ); ?> />
+			<?php _e( "Show a <em>'follow comments'</em> option in the comment form", 'jetpack' ); ?>
+		</p>
+
+	<?php
+	}
+
+	function validate_settings( $settings ) {
+		global $allowedposttags;
+
+		$default = $this->get_default_settings();
+
+		// Blog Follow
+		$settings['invitation'] = trim( wp_kses( $settings['invitation'], $allowedposttags ) );
+		if ( empty( $settings['invitation'] ) )
+			$settings['invitation'] = $default['invitation'];
+
+		// Comments Follow (single post)
+		$settings['comment_follow'] = trim( wp_kses( $settings['comment_follow'], $allowedposttags ) );
+		if ( empty( $settings['comment_follow'] ) )
+			$settings['comment_follow'] = $default['comment_follow'];
+
+		return $settings;
+	}
+
+	public function reading_section() {
+		_e( 'These settings change emails sent from your blog to followers.' , 'jetpack');
+	}
+
+	public function setting_invitation() {
+		$settings = $this->get_settings();
+		echo '<textarea name="subscription_options[invitation]" class="large-text" cols="50" rows="5">'.$settings['invitation'].'</textarea>';
+		echo '<p><span class="description">'.__( 'Introduction text sent when someone follows your blog. (Site and confirmation details will be automatically added for you.)' , 'jetpack').'</span></p>';
+	}
+
+	public function setting_comment_follow() {
+		$settings = $this->get_settings();
+		echo '<textarea name="subscription_options[comment_follow]" class="large-text" cols="50" rows="5">'.$settings['comment_follow'].'</textarea>';
+		echo '<p><span class="description">'.__( 'Introduction text sent when someone follows a post on your blog. (Site and confirmation details will be automatically added for you.)' , 'jetpack').'</span></p>';
+	}
+
+	function get_default_settings() {
+		return array(
+			'invitation'             => __( "Howdy.\n\nYou recently followed this blog's posts. This means you will receive each new post by email.\n\nTo activate, click confirm below. If you believe this is an error, ignore this message and we'll never bother you again." , 'jetpack'),
+			'comment_follow'  => __( "Howdy.\n\nYou recently followed one of my posts. This means you will receive an email when new comments are posted.\n\nTo activate, click confirm below. If you believe this is an error, ignore this message and we'll never bother you again." , 'jetpack')
+		);
+	}
+		
+	function get_settings() {
+		return wp_parse_args( (array) get_option( 'subscription_options', array() ), $this->get_default_settings() );
+	}
+		
 	/**
 	 * Jetpack_Subscriptions::subscribe()
 	 *
@@ -161,7 +286,7 @@ class Jetpack_Subscriptions {
 
 		if ( !$async ) {
 			Jetpack::load_xml_rpc_client();
-			$xml =& new Jetpack_IXR_ClientMulticall();
+			$xml = new Jetpack_IXR_ClientMulticall();
 		}
 
 		foreach( (array) $post_ids as $post_id ) {
@@ -200,25 +325,25 @@ class Jetpack_Subscriptions {
 			}
 
 			if ( !is_array( $response[0] ) || empty( $response[0]['status'] ) ) {
-				$r[] =& new Jetpack_Error( 'unknown' );
+				$r[] = new Jetpack_Error( 'unknown' );
 				continue;
 			}
 
 			switch ( $response[0]['status'] ) {
 			case 'error' :
-				$r[] =& new Jetpack_Error( 'not_subscribed' );
+				$r[] = new Jetpack_Error( 'not_subscribed' );
 				continue 2;
 			case 'disabled' :
-				$r[] =& new Jetpack_Error( 'disabled' );
+				$r[] = new Jetpack_Error( 'disabled' );
 				continue 2;
 			case 'active' :
-				$r[] =& new Jetpack_Error( 'active' );
+				$r[] = new Jetpack_Error( 'active' );
 				continue 2;
 			case 'pending' :
 				$r[] = true;
 				continue 2;
 			default :
-				$r[] =& new Jetpack_Error( 'unknown_status', (string) $response[0]['status'] );
+				$r[] = new Jetpack_Error( 'unknown_status', (string) $response[0]['status'] );
 				continue 2;
 			}
 		}
@@ -242,7 +367,9 @@ class Jetpack_Subscriptions {
 	 */
 	function widget_submit() {
 		// Check the nonce.
-		check_admin_referer( 'blogsub_subscribe_' . get_current_blog_id() );
+		if ( is_user_logged_in() ) {
+			check_admin_referer( 'blogsub_subscribe_' . get_current_blog_id() );
+		}
 
 		if ( empty( $_REQUEST['email'] ) )
 			return false;
@@ -314,17 +441,19 @@ class Jetpack_Subscriptions {
 
 		$str = '';
 
-		if ( FALSE === has_filter( 'comment_form', 'show_subscription_checkbox' ) ) {
+		if ( FALSE === has_filter( 'comment_form', 'show_subscription_checkbox' ) && 1 == get_option( 'stc_enabled', 1 ) ) {
 			// Subscribe to comments checkbox
 			$str .= '<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"' . $comments_checked . ' /> ';
-			$str .= '<label class="subscribe-label" id="subscribe-label" for="subscribe_comments">' . __( 'Notify me of follow-up comments by email.', 'jetpack' ) . '</label>';
+			$str .= '<label class="subscribe-label" id="subscribe-label" for="subscribe_comments" style="display: inline;">' . __( 'Notify me of follow-up comments by email.', 'jetpack' ) . '</label>';
 			$str .= '</p>';
 		}
 
-		// Subscribe to blog checkbox
-		$str .= '<p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"' . $blog_checked . ' /> ';
-		$str .=	'<label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">' . __( 'Notify me of new posts by email.', 'jetpack' ) . '</label>';
-		$str .= '</p>';
+		if ( 1 == get_option( 'stb_enabled', 1 ) ) {
+			// Subscribe to blog checkbox
+			$str .= '<p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"' . $blog_checked . ' /> ';
+			$str .=	'<label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">' . __( 'Notify me of new posts by email.', 'jetpack' ) . '</label>';
+			$str .= '</p>';
+		}
 
 		echo apply_filters( 'jetpack_comment_subscription_form', $str );
 	 }
@@ -421,8 +550,8 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 		if ( isset( $_GET['subscribe'] ) && 'success' == $_GET['subscribe'] ) {
 			?>
 
-			<div style="background-color: #FFFFE0; border: 1px solid #E6DB55; padding-left: 5px; padding-right: 5px; margin-bottom: 10px;">
-				<?php _e( 'An email was just sent to confirm your subscription. Please find the email now and click activate to start subscribing.', 'jetpack' ); ?>
+			<div class="success">
+				<p><?php _e( 'An email was just sent to confirm your subscription. Please find the email now and click activate to start subscribing.', 'jetpack' ); ?></p>
 			</div>
 
 			<?php
@@ -452,7 +581,7 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 			$email_address = $current_user->user_email;
 
 		// Display a subscribe form ?>
-		<a name="subscribe-blog"></a>
+		<a id="subscribe-blog"></a>
 		<form action="" method="post" accept-charset="utf-8" id="subscribe-blog">
 			<?php
 			if ( ! isset ( $_GET['subscribe'] ) ) {
@@ -471,7 +600,11 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 				<input type="hidden" name="source" value="<?php echo esc_url( $referer ); ?>" />
 				<input type="hidden" name="sub-type" value="<?php echo esc_attr( $source ); ?>" />
 				<input type="hidden" name="redirect_fragment" value="<?php echo esc_attr( $widget_id ); ?>" />
-				<?php wp_nonce_field( 'blogsub_subscribe_'. get_current_blog_id(), '_wpnonce', false ); ?>
+				<?php
+					if ( is_user_logged_in() ) {
+						wp_nonce_field( 'blogsub_subscribe_'. get_current_blog_id(), '_wpnonce', false );
+					}
+				?>
 				<input type="submit" value="<?php echo esc_attr( $subscribe_button ); ?>" name="jetpack_subscriptions_widget" />
 			</p>
 		</form>
@@ -495,8 +628,8 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 		if ( FALSE === $subs_count || 'failed' == $subs_count['status'] ) {
 			Jetpack:: load_xml_rpc_client();
 
-			$xml =& new Jetpack_IXR_Client( array(
-				'user_id' => $GLOBALS['current_user']->ID
+			$xml = new Jetpack_IXR_Client( array(
+				'user_id' => JETPACK_MASTER_USER,
 			) );
 
 			$xml->query( 'jetpack.fetchSubscriberCount' );

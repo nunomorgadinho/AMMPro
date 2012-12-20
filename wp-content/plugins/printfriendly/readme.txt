@@ -2,8 +2,8 @@
 Contributors: printfriendly,joostdevalk
 Tags: print, pdf, printer, printing, printable, widget, plugin
 Requires at least: 2.8
-Tested up to: 3.2.1
-Stable tag: 3.0.8
+Tested up to: 3.4.2
+Stable tag: 3.1.4
 
 The #1 Print and PDF button for your WordPress site. Printer Friendly pages without coding, css, or print.css. Fast, easy, and professional.
 
@@ -18,15 +18,16 @@ The Print Friendly & PDF button automatically creates printer friendly and PDF v
 **Cool Features For You:**
 
 * Get a Printer Friendly and PDF button for your users.
-* Fully Customizable! Choose your favorite print and PDF button, use a text link, or use your own graphic. 
+* Fully Customizable! Choose your favorite print and PDF button, use a text link, or use your own graphic.
 * Get precision placement with easy to change margins, alignment, and pages for your Print and PDF button.
 * On-Page-Lightbox. Have you noticed that other printer friendly buttons open new windows, or tabs? Not with Print Friendly & PDF button. It opens in a Lightbox so you your users stay on the page, and your wp website.
-* Professional looking print and PDF buttons and user experience.
+* Professional looking print and PDFs with branded headers.
 * More repeats and new users. Your brand/URL are printed on the page or saved in the PDF so users remember your site and new users can find you.
 
 **Cool Print Features for Users:**
+
 * Optimizes pages for printing and PDF so you save money and the environment.
-* You can Print or get a PDF. 
+* You can Print or get a PDF.
 * Edit the page before printing or getting a PDF: remove the images and paragraphs you don't need to save ink!
 
 PrintFriendly and PDF is the #1 print optimization technology, **as featured in [Lifehacker](http://lifehacker.com/5272212/print-friendly-optimizes-web-pages-for-printing "PrintFriendly & PDF in Lifehacker"), [Mashable](http://mashable.com/2009/05/18/print-friendly/ "PrintFriendly & PDF in Mashable") & [makeuseof](http://www.makeuseof.com/dir/printfriendly-save-on-paper-and-ink/#comment-95052)**.
@@ -36,7 +37,7 @@ PrintFriendly and PDF is the #1 print optimization technology, **as featured in 
 == Installation ==
 
 1. Search for PrintFriendly in your WordPress backend and click install, or download the printfriendly.zip file and unzip it.
-2. If you downloaded the zip, upload the printfriendly folder into wp-content/plugins folder 
+2. If you downloaded the zip, upload the printfriendly folder into wp-content/plugins folder
 3. Activate the plugin in your WordPress Admin area.
 4. Select "Settings" to customize button style and placement.
 
@@ -63,6 +64,30 @@ If you have any other issues with the plugin or the PrintFriendly widget, please
 2. The Settings Page: choose your print button, text link, or use your own text or graphic.
 
 == Changelog ==
+
+= 3.1.4 =
+
+* Changed https url. Don't hide text change box when disabling css.
+
+= 3.1.3 =
+
+* Fixed bug with disable css option.
+
+= 3.1.2 =
+
+* Added disable css option to admin settings.
+
+= 3.1.1 =
+
+* Fixed admin js caching.
+
+= 3.1.0 =
+
+* Fixed admin css caching.
+
+= 3.0.9 =
+
+* New features: Custom header, disable click-to-delete, https support (beta), PrintFriendly Pro (ad-free).
 
 = 3.0.8 =
 

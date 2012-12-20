@@ -3,7 +3,7 @@ Contributors: pkthree
 Donate link: http://www.theblog.ca
 Tags: login, logout, redirect, admin, administration, dashboard, users, authentication
 Requires at least: 2.7
-Tested up to: 3.3
+Tested up to: 3.4
 Stable tag: trunk
 
 Redirect users to different locations after logging in and logging out.
@@ -12,7 +12,7 @@ Redirect users to different locations after logging in and logging out.
 
 Define a set of redirect rules for specific users, users with specific roles, users with specific capabilities, and a blanket rule for all other users (logout redirects in this plugin support only this blanket rule). Also, set a redirect URL for post-registration. This is all managed in Settings > Login/logout redirects.
 
-You can use the syntax **[variable]username[/variable]** in your URLs so that the system will build a dynamic URL upon each login, replacing that text with the user's username. In addition to username, there is "homeurl", "siteurl", and "postid-23" and you can also add your own custom URL "variables". See Other Notes / How to Extend for documentation.
+You can use the syntax **[variable]username[/variable]** in your URLs so that the system will build a dynamic URL upon each login, replacing that text with the user's username. In addition to username, there is "homeurl", "siteurl", "postid-23", "http_referer" and you can also add your own custom URL "variables". See Other Notes / How to Extend for documentation.
 
 If you're using a plugin such as Gigya that bypasses the regular WordPress login redirect process (and only allows one fixed redirect URL), set that plugin to redirect to wp-content/plugins/peters-login-redirect/wplogin_redirect_control.php and set the $rul_use_redirect_controller setting to "true" in the main plugin file.
 
@@ -28,6 +28,7 @@ This plugin also includes a function `rul_register` that acts the same as the `w
 * cs\_CZ translation by Petr Mašek
 * de\_DE translation by Lara of http://www.u-center.nl
 * es\_ES translation by Closemarketing of http://www.closemarketing.es
+* lt\_LT translation by Vincent G of http://www.host1free.com
 
 == Installation ==
 
@@ -174,7 +175,22 @@ add_filter( 'rul_replace_variable', 'customRULVariableMonth', 10, 3 );`
 
 Be sure to rawurlencode the returned variable if necessary.
 
+= Custom "My Portal" link =
+
+A common need is to display the "redirect" link for a user in the site navigation or sidebar.
+
+Look at the function rul_register() in the plugin file for inspiration; it makes use of the redirect_to_front_page() function to determine the URL and then provides the relevant output code.
+
+For a deeper dive into this feature, please see this video:
+http://www.screenr.com/Gqi8
+
 == Changelog ==
+
+= 2.6.0 =
+* 2012-09-22: Added support for URL variable "http_referer" (note the single "r") to redirect the user back to the page that hosted the login form, as long as the login page isn't the standard wp-login.php. There are several caveats to this, such as: If you want to redirect only on certain forms and/or specify a redirect on the standard wp-login.php page, you should modify the form itself to use a "redirect_to" form variable instead.
+
+= 2.5.3 =
+* 2012-06-15: Bug fix: Fallback redirect rule wouldn't update properly if logout URL was blank on MySQL installs with strict mode enabled (thanks kvandekrol!)
 
 = 2.5.2 =
 * 2012-02-06: Bug fix: Fallback redirect rule updates were broken for non-English installs.

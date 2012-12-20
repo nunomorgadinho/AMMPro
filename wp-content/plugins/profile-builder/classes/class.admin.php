@@ -1,4 +1,4 @@
-<?php if (!defined('ProfileBuilderVersion')) exit('No direct script access allowed');
+<?php if (!defined('PROFILE_BUILDER_VERSION')) exit('No direct script access allowed');
  /*
 Original Plugin Name: OptionTree
 Original Plugin URI: http://wp.envato.com
@@ -15,7 +15,7 @@ class PB_Admin{
 	private $version = NULL;
 
 	function __construct(){
-		$this->version = ProfileBuilderVersion;
+		$this->version = PROFILE_BUILDER_VERSION;
 	}
   
 	/**
@@ -100,7 +100,11 @@ class PB_Admin{
 								'passwordRequired' => 'no' 
 							);
 		add_option( 'wppb_default_settings', $wppb_default_settings );    //set all fields visible on first activation of the plugin
-		add_option( 'wppb_default_style', 'yes');
+		$wppb_default_settings = array(
+						'extraFieldsLayout' => 'yes',
+						'emailConfirmation' => 'no'
+						);
+		add_option( 'wppb_general_settings', $wppb_default_settings);
 		$all_roles = $wp_roles->roles;
 		$editable_roles = apply_filters('editable_roles', $all_roles);
 
@@ -109,9 +113,9 @@ class PB_Admin{
 		if ($admintSettingsPresent == 'not_found'){                    			 // if the field doesn't exists, then create it
 			$rolesArray = array();
 			foreach ( $editable_roles as $key => $data )
-				$rolesArray = array( $key => 'show' ) + $rolesArray;
+				$rolesArray = array( $data['name'] => 'show' ) + $rolesArray;
 			$rolesArray = array_reverse($rolesArray,true);
-			add_option( 'wppb_display_admin_settings', $rolesArray);
+			update_option( 'wppb_display_admin_settings', $rolesArray);
 		}
 	
   }
@@ -156,11 +160,11 @@ class PB_Admin{
 	*/
 	function profile_builder_load(){
 		// enqueue styles
-		wp_enqueue_style( 'profile-builder-style', wppb_plugin_url.'/assets/css/style.css', false, $this->version, 'screen');
+		wp_enqueue_style( 'profile-builder-style', WPPB_PLUGIN_URL.'/assets/css/style.css', false, $this->version, 'screen');
 
 		// enqueue scripts
 		add_thickbox();	
-		wp_enqueue_script( 'jquery-extra-profile-fields', wppb_plugin_url.'/assets/js/jquery.extra.fields.js', array('jquery','media-upload','thickbox','jquery-ui-core','jquery-ui-tabs', 'jquery-ui-sortable'), $this->version );
+		wp_enqueue_script( 'jquery-extra-profile-fields', WPPB_PLUGIN_URL.'/assets/js/jquery.extra.fields.js', array('jquery','media-upload','thickbox','jquery-ui-core','jquery-ui-tabs', 'jquery-ui-sortable'), $this->version );
 		
 		// remove GD star rating conflicts
 		wp_deregister_style( 'gdsr-jquery-ui-core' );
@@ -168,8 +172,8 @@ class PB_Admin{
 	}
   
 		function profile_builder_options_page() {
-		// Grab Options Page
-		include( wppb_plugin_dir.'/front-end/options.php' );
+			// Grab Options Page
+			include( WPPB_PLUGIN_DIR.'/functions/options.php' );
 		}
 		 
 }

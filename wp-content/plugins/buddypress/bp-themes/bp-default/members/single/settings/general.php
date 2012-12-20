@@ -6,9 +6,8 @@
  * @package BuddyPress
  * @subpackage bp-default
  */
-?>
 
-<?php get_header( 'buddypress' ) ?>
+get_header( 'buddypress' ); ?>
 
 	<div id="content">
 		<div class="padder">
@@ -49,12 +48,16 @@
 
 				<h3><?php _e( 'General Settings', 'buddypress' ); ?></h3>
 
-				<?php do_action( 'bp_template_content' ) ?>
+				<?php do_action( 'bp_template_content' ); ?>
 
 				<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/general'; ?>" method="post" class="standard-form" id="settings-form">
 
-					<label for="pwd"><?php _e( 'Current Password <span>(required to update email or change current password)</span>', 'buddypress' ); ?></label>
-					<input type="password" name="pwd" id="pwd" size="16" value="" class="settings-input small" /> &nbsp;<a href="<?php echo site_url( add_query_arg( array( 'action' => 'lostpassword' ), 'wp-login.php' ), 'login' ); ?>" title="<?php _e( 'Password Lost and Found', 'buddypress' ); ?>"><?php _e( 'Lost your password?', 'buddypress' ); ?></a>
+					<?php if ( !is_super_admin() ) : ?>
+
+						<label for="pwd"><?php _e( 'Current Password <span>(required to update email or change current password)</span>', 'buddypress' ); ?></label>
+						<input type="password" name="pwd" id="pwd" size="16" value="" class="settings-input small" /> &nbsp;<a href="<?php echo site_url( add_query_arg( array( 'action' => 'lostpassword' ), 'wp-login.php' ), 'login' ); ?>" title="<?php _e( 'Password Lost and Found', 'buddypress' ); ?>"><?php _e( 'Lost your password?', 'buddypress' ); ?></a>
+
+					<?php endif; ?>
 
 					<label for="email"><?php _e( 'Account Email', 'buddypress' ); ?></label>
 					<input type="text" name="email" id="email" value="<?php echo bp_get_displayed_user_email(); ?>" class="settings-input" />
@@ -84,6 +87,6 @@
 		</div><!-- .padder -->
 	</div><!-- #content -->
 
-<?php get_sidebar( 'buddypress' ) ?>
+<?php get_sidebar( 'buddypress' ); ?>
 
-<?php get_footer( 'buddypress' ) ?>
+<?php get_footer( 'buddypress' ); ?>
